@@ -6,6 +6,9 @@ A sample project for Django 1.5 used in Google Cloud Platform
 (Google App Engine, Google Cloud SQL, and Google Cloud Storage).
 This project also includes simple front-end development and design.
 
+This project is based on gae-django-skeleton:
+https://github.com/gluwa/gae-django-skeleton
+
 The site let's clients to post projects for freelancers.
 Freelancers can apply to the projects,
 and post portfolio to attract potential customers.
