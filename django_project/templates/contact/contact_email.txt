@@ -1,0 +1,5 @@
+{{ body|urlize|linebreaks }}
+
+name : {{ name }}
+email : {{ email }}
+phone number : {{ phone_no }}

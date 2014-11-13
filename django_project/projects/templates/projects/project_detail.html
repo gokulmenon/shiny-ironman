@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% load i18n humanize %}
+
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans 'home' %}</a></li>
+        <li><a href="{% url 'projects:list' %}">{% trans 'project' %}</a></li>
+        <li>{{ project.title }}</li>
+    </ol>
+
+    <div class="page-header">
+        <h1>
+            {{ project.title }}
+            <small>
+                -
+                <a class="text-primary" href="{% url 'users:detail' project.owner.username %}">
+                    {{ project.owner }}
+                </a>
+                <a class="text-info" href="{% url 'messages_compose_to' project.owner.username %}">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </small>
+        </h1>
+
+        <div class="clearfix">
+            <div class="pull-left text-info application_count">
+                {{ project.application_list.count }} {% trans "applications" %}
+            </div>
+
+            {% if user == project.owner or user.is_staff %}
+                <div class="btn-group pull-right">
+                    <a type="button" class="btn btn-default" href="{% url 'applications:list' project.pk %}">
+                        {% trans 'Project Application List' %}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="project_detail">
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.location }}
+        </p>
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.deadline }}
+            {% trans 'deadline' %}
+        </p>
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.estimated_price|intcomma }} {% trans 'KRW (x 10,000)' %}
+        </p>
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.estimated_period }}
+            {% trans "days" %}
+        </p>
+    </div>
+
+    <p class="text-warning">
+        {% trans "Above is a subject to change upon negotiation. Use it as reference purposes only." %}
+    </p>
+
+    <p class="text-info">
+        {% trans 'Conditions seem not reasonable enough? Suggest an alternative!' %}
+        <a class="text-info" href="{% url 'messages_compose_to' project.owner.username %}">
+            <i class="fa fa-envelope"></i> {% trans 'Send suggestion' %}
+        </a>
+    </p>
+
+    <pre>
+        {{ project.description|urlize|linebreaks }}
+    </pre>
+
+    {% if user.is_staff %}
+        <p class="text-success">
+            {% if project.inspected %}
+                {% trans 'approved project' %}
+            {% else %}
+                {% trans 'unapproved project' %}
+            {% endif %}
+        </p>
+    {% endif %}
+
+    <p class="text-right">
+        {% if user == project.owner or user.is_staff %}
+            {% if user.is_staff %}
+                <a class="btn btn-primary" href="{% url 'projects:approve' project.pk %}" role="button">
+                    {% if project.inspected %}
+                        {% trans 'UnApprove' %}
+                    {% else %}
+                        {% trans 'Approve' %}
+                    {% endif %}
+                </a>
+            {% endif %}
+            <a class="btn btn-default" href="{% url 'projects:form' project.pk %}" role="button">
+                {% trans "Edit" %}
+            </a>
+            <a class="btn btn-danger" href="{% url 'projects:delete' project.pk %}" role="button">
+                {% trans "Delete" %}
+            </a>
+        {% else %}
+            {% if project.over_deadline %}
+                <a class="btn btn-default" disabled="disabled" role="button">
+                    {% trans "Closed" %}
+                </a>
+            {% else %}
+                <a class="btn btn-default" href="{% url 'applications:form' project.pk %}" role="button">
+                    {% trans "Apply" %}
+                </a>
+            {% endif %}
+        {% endif %}
+    </p>
+{% endblock content %}

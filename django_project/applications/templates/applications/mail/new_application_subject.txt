@@ -1,0 +1,1 @@
+{% load i18n %}{% blocktrans %}[{{ site_name }}] New Application for {{ project_title }}{% endblocktrans %}

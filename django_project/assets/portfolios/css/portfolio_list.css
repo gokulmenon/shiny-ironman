@@ -1,0 +1,27 @@
+#search_portfolio {
+  width: 250px; }
+  #search_portfolio .form-group {
+    margin: 0; }
+    #search_portfolio .form-group input {
+      border-radius: 0; }
+  #search_portfolio .input-group-addon {
+    cursor: pointer; }
+
+.current_page {
+  line-height: 39px; }
+
+.pagination_wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.user_img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px; }
+
+.portfolio_img {
+  width: inherit !important;
+  margin: 0 auto; }

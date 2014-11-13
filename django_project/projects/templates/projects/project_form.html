@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static i18n crispy_forms_tags %}
+
+
+{% block head %}
+    <!-- Facebook Conversion Code for 프로젝트 등록 -->
+    <script>(function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6019913962670', {'value':'1.00','currency':'KRW'}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6019913962670&amp;cd[value]=1.00&amp;cd[currency]=KRW&amp;noscript=1" /></noscript>
+{% endblock %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans "home" %}</a></li>
+        <li><a href="{% url 'projects:list' %}">{% trans 'project' %}</a></li>
+        {% if project %}
+            <li><a href="{% url 'projects:detail' project.pk %}">{{ project.title }}</a></li>
+        {% else %}
+            <li>{% trans 'Create Project' %}</li>
+        {% endif %}
+    </ol>
+
+    <h1>
+        {% if project %}
+            {% trans "Edit Project" %}
+        {% else %}
+            {% trans "Create Project" %}
+        {% endif %}
+    </h1>
+    <p class="text-info">
+        {% blocktrans %}
+            There is no restriction whatsoever in sharing your contact information.
+            Please feel free to put your e-mail, phone number to get in touch with others.
+        {% endblocktrans %}
+    </p>
+    <p class="text-info">
+        {% trans "Project appears to the others shortly after inspection of DodMe administrators." %}
+    </p>
+
+    <form action="." method="post" class="uniForm">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-primary pull-right" type="submit" value="{% trans 'Submit' %}">
+    </form>
+{% endblock %}

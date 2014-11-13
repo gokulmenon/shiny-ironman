@@ -1,0 +1,9 @@
+.current_page {
+  line-height: 39px; }
+
+.pagination_wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans 'Page Not Found' %}{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">
+        {% trans 'This is not the page you were looking for.' %}
+    </h1>
+    <p class="text-center">
+        <img style="width: 300px;" src="{% static 'img/logo.png' %}"/>
+    </p>
+    <p class="text-center">
+        {% trans '... and this is the face of DodMe octopus in shock.' %}
+    </p>
+{% endblock content %}

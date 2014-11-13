@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans 'Server Error' %}{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">
+        {% trans 'There was a server error.' %}
+    </h1>
+    <p class="text-center">
+        <img style="width: 300px;" src="{% static 'img/logo.png' %}"/>
+    </p>
+    <p class="text-center">
+        {% blocktrans %}
+            ... and this is the face of DodMe octopus in shame.<br/>
+            DodMe engineers are automatically notified with your error.<br/>
+            DodMe octopus will peck them until they debug it for you.<br/>
+        {% endblocktrans %}
+    </p>
+{% endblock content %}

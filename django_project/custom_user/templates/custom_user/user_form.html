@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% load staticfiles i18n compressed %}
+
+{% block title %}
+	{% trans "Profile" %}
+{% endblock title %}
+
+{% block stylesheets %}
+	{{ block.super }}
+
+    {% compressed_css user_form %}
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <form role="form" method="post" enctype="multipart/form-data" action="{% url 'users:update' user.username %}">
+            {% csrf_token %}
+            {# Include the hidden fields #}
+            {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+            {# Include the visible fields #}
+            {% for field in form.visible_fields %}
+                <div class="fieldWrapper">
+                    <div class="form-group{% if field.errors %} has-error{% endif %}">
+                        <label for="{{ field.name }}">{{ field.label }}</label>
+                        {{ field.errors }}
+                        {% if field.name == 'image' %}
+                            {% if user.image %}
+                                <p>
+                                    <img id="user_image" src="{{ user.image_url }}=s120-c">
+                                </p>
+                            {% endif %}
+                            <p class="text-info">
+                                {% blocktrans %}
+                                    Maximum file size is 1 MB.<br/>
+                                    Recommended size is 150 px by 150 px.
+                                {% endblocktrans %}
+                            </p>
+                            <input id="id_image" name="image" type="file">
+                        {% else %}
+                            {{ field }}
+                            {%  if field.name == 'email' %}
+                                {% if not user.is_email_validated %}
+                                    <p>{% trans "This email is not validated yet. Please validate it to use DodMe with full functionality." %}</p>
+                                    <button class="btn btn-lg btn-info btn-block email_verification" type="button">{% trans "Resend Verification E-mail" %}</button>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            <p class="text-info">
+                {% blocktrans %}
+                    There is no restriction whatsoever in sharing your contact information.
+                    Please feel free to put your e-mail, phone number to get in touch with others.
+                {% endblocktrans %}
+            </p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Update Profile" %}</button>
+        </form>
+    </div>
+    <div class="col-md-2">
+    </div>
+{% endblock content %}

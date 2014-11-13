@@ -1,0 +1,303 @@
+# TRANSLATION FOR GLUWA USER
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <TAELIMOH@GLUWA.COM>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-18 21:43-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: admin.py:13
+msgid "Personal info"
+msgstr "개인 정보"
+
+#: admin.py:14
+msgid "Permissions"
+msgstr "권한들"
+
+#: admin.py:16
+msgid "Important dates"
+msgstr "중요한 날짜들"
+
+#: forms.py:18
+msgid "A user with that email already exists."
+msgstr "이 이메일을 가진 사용자가 이미 존재합니다."
+
+#: forms.py:19
+msgid "A user with that username already exists."
+msgstr "이 닉네임을 가진 사용자가 이미 존재합니다."
+
+#: forms.py:20 forms.py:79
+msgid "That username cannot be used."
+msgstr "그 닉네임은 사용하실 수 없습니다."
+
+#: forms.py:23 forms.py:81 forms.py:142 forms.py:143
+msgid "E-mail"
+msgstr "이메일"
+
+#: forms.py:24
+msgid "Required. Valid active e-mail addresses only."
+msgstr "필수입니다. 올바른 이메일 주소를 입력하세요."
+
+#: forms.py:26
+msgid "This value may contain only valid e-mail addresses only."
+msgstr "이 값은 올바른 이메일 주소만 포함할 수 있습니다."
+
+#: forms.py:27 forms.py:83 forms.py:145 forms.py:146
+msgid "username"
+msgstr "닉네임"
+
+#: forms.py:29 forms.py:84
+msgid "Required. 30 characters or fewer. Letters and digits only."
+msgstr ""
+"필수입니다. 30자 혹은 그 이하여야합니다. 글자나 숫자만 허용됩니다"
+
+#: forms.py:31
+#, fuzzy
+msgid "This value may contain only letters and numbers."
+msgstr "이 값은 글자, 숫자, 혹은 @/./+/-/_ 등의 문자만 허용됩니다"
+
+#: forms.py:32 forms.py:88
+msgid "Password"
+msgstr "비밀번호"
+
+#: forms.py:46 forms.py:112 forms.py:173
+msgid ""
+"Registration using disposable email addresses is prohibited.             "
+"Please supply a different email address."
+msgstr ""
+"일회용 이메일 주소를 이용한 가입은 금지되어 있습니다.다른 이메일 주소를 제공"
+"해 주세요."
+
+#: forms.py:86 forms.py:150
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
+msgstr "이 값은 글자, 숫자, 혹은 @/./+/-/_ 등의 문자만 허용됩니다"
+
+#: forms.py:89
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user's "
+"password, but you can change the password using <a href=\"password/\">this "
+"form</a>."
+msgstr ""
+"비밀번호는 그대로 저장 되지 않기 때문에 이 사용자의 비밀번호를 볼 수 있는 방"
+"법은 없습니다.하지만 <a href=\"password/\">이 양식</a>을 이용해 비밀번호를 변"
+"경할 수 있습니다."
+
+#: forms.py:93 forms.py:94 forms.py:153 forms.py:154
+msgid "About"
+msgstr "자기 소개"
+
+#: forms.py:138
+msgid "Picture"
+msgstr "사진"
+
+#: forms.py:147
+msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+"필수입니다. 30자 혹은 그 이하여야합니다. 글자, 숫자, 혹은 @/./+/-/_ 등의 문자"
+"가 허용됩니다"
+
+#: models.py:68
+msgid "email address"
+msgstr "이메일 주소"
+
+#: models.py:70
+msgid "username"
+msgstr "닉네임"
+
+#: models.py:71
+#, fuzzy
+msgid "Required. 30 characters or fewer. Letters, numbers and space"
+msgstr ""
+"필수입니다. 30자 혹은 그 이하여야합니다. 글자, 숫자, 혹은 @/./+/-/_ 등의 문자"
+"가 허용됩니다"
+
+#: models.py:74
+msgid "Enter a valid username."
+msgstr "올바른 닉네임을 입력해 주세요."
+
+#: models.py:76
+msgid "about"
+msgstr "자기소개"
+
+#: models.py:78
+msgid "email validated"
+msgstr "이메일 인증 완료"
+
+#: models.py:79
+msgid "Designates whether this user should be treated as unvalidated."
+msgstr "사용자의 비승인 상태 취급 여부를 결정합니다."
+
+#: models.py:81
+msgid "staff status"
+msgstr "직원 등급"
+
+#: models.py:82
+msgid "Designates whether the user can log into this admin site."
+msgstr "사용자의 관리자 사이트 로그인 가능 여부를 결정합니다."
+
+#: models.py:84
+msgid "active"
+msgstr "활성"
+
+#: models.py:85
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+"사용자를 활성 상태를 결정합니다. 계정을 지우는 대신 이것을 선택 해제 하세요."
+
+#: models.py:87
+msgid "date joined"
+msgstr "가입일"
+
+#: models.py:88
+msgid "modified"
+msgstr "변경 됨"
+
+#: templates/gluwa_user/side_nav.html:11
+msgid "User Page"
+msgstr "유저 페이지"
+
+#: templates/gluwa_user/side_nav.html:12
+#: templates/gluwa_user/user_like_detail.html:72
+msgid "Liked"
+msgstr "좋아요"
+
+#: templates/gluwa_user/side_nav.html:27
+#: templates/gluwa_user/user_form/side_nav.html:22
+msgid "About Company"
+msgstr "회사 소개"
+
+#: templates/gluwa_user/side_nav.html:31
+#: templates/gluwa_user/user_form/side_nav.html:26
+msgid "Terms of Service"
+msgstr "이용약관"
+
+#: templates/gluwa_user/side_nav.html:35
+#: templates/gluwa_user/user_form/side_nav.html:30
+msgid "Privacy"
+msgstr "개인정보"
+
+#: templates/gluwa_user/side_nav.html:39
+#: templates/gluwa_user/user_form/side_nav.html:34
+msgid "Contact"
+msgstr "연락처"
+
+#: templates/gluwa_user/user_detail.html:76
+#: templates/gluwa_user/user_detail.html:85
+#: templates/gluwa_user/user_like_detail.html:61
+msgid "Follow"
+msgstr "팔로우"
+
+#: templates/gluwa_user/user_detail.html:85
+#: templates/gluwa_user/user_like_detail.html:61
+msgid "Following"
+msgstr "팔로잉"
+
+#: templates/gluwa_user/user_detail.html:100
+msgid "The Most Recent Post"
+msgstr "최근 게시물"
+
+#: templates/gluwa_user/user_detail.html:104
+#: templates/gluwa_user/user_like_detail.html:76
+msgid "Sort by"
+msgstr "정렬"
+
+#: templates/gluwa_user/user_detail.html:106
+#: templates/gluwa_user/user_like_detail.html:78
+msgid "Popularity"
+msgstr "인기"
+
+#: templates/gluwa_user/user_detail.html:107
+#: templates/gluwa_user/user_like_detail.html:79
+msgid "Time"
+msgstr "시간"
+
+#: templates/gluwa_user/user_detail.html:115
+msgid "There is no posts here, yet. Be our first contributor!"
+msgstr "이곳엔 아직 게시물이 없습니다. 저희의 첫번째 기여자가 되어 주세요!"
+
+#: templates/gluwa_user/user_form.html:6
+#: templates/gluwa_user/user_form/side_nav.html:10
+msgid "Profile"
+msgstr "프로필"
+
+#: templates/gluwa_user/user_form.html:22
+msgid "Verification E-mail Sent"
+msgstr "인증 메일 전송 완료"
+
+#: templates/gluwa_user/user_form.html:54
+msgid ""
+"This email is not validated yet. Please validate it to use gluwa with full "
+"functionality."
+msgstr ""
+"이 이메일은 아직 인증되지 않았습니다. 글루와의 모든 기능을 사용하시기 위해서 "
+"이메일을 인증해 주시기 바랍니다."
+
+#: templates/gluwa_user/user_form.html:55
+msgid "Resend Verification E-mail"
+msgstr "인증 메일 재전송"
+
+#: templates/gluwa_user/user_form.html:62
+msgid "Update Profile"
+msgstr "프로필 업데이트"
+
+#: templates/gluwa_user/user_form_social.html:6
+msgid "Social Integration"
+msgstr "소셜 연결"
+
+#: templates/gluwa_user/user_form_social.html:21
+msgid "Connect to social network"
+msgstr "소셜 네트워크에 연결"
+
+#: templates/gluwa_user/user_form_social.html:26
+msgid "Facebook Connected"
+msgstr "페이스북 연결 됨"
+
+#: templates/gluwa_user/user_form_social.html:31
+msgid "Connect with Facebook"
+msgstr "페이스북으로 연결"
+
+#: templates/gluwa_user/user_form_social.html:39
+msgid "Google+ Connected"
+msgstr "구글+ 연결 됨"
+
+#: templates/gluwa_user/user_form_social.html:44
+msgid "Connect with Google+"
+msgstr "구글+로 연결"
+
+#: templates/gluwa_user/user_form_social.html:52
+msgid "Twitter Connected"
+msgstr "트위터 연결 됨"
+
+#: templates/gluwa_user/user_form_social.html:57
+msgid "Connect with Twitter"
+msgstr "트위터로 연결"
+
+#: templates/gluwa_user/user_like_detail.html:54
+#, python-format
+msgid "Posts liked by %(username)s"
+msgstr "%(username)s님께서 좋아하신 게시물들"
+
+#: templates/gluwa_user/user_form/side_nav.html:11
+msgid "Social Account Connection"
+msgstr "소셜 계정 연결"
+
+#: templates/gluwa_user/user_form/side_nav.html:12
+msgid "Change Password"
+msgstr "비밀번호 변경"
+
+#: templates/gluwa_user/user_list/user_list.html:6
+msgid "User List"
+msgstr "사용자 목록"

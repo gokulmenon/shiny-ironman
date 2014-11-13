@@ -1,0 +1,100 @@
+html {
+  background-color: inherit; }
+
+body {
+  background-color: #34495e; }
+
+.base-footer {
+  display: none; }
+
+#bg {
+  z-index: -999;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  -webkit-filter: blur(5px); }
+  #bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%; }
+
+h1 {
+  text-align: center; }
+
+#container-wrapper, h2, h3.stit, h4.stit {
+  font-size: 24px;
+  color: #32353c;
+  padding-bottom: 22px; }
+
+.list-inline > li {
+  padding: 0; }
+
+.btn-sns {
+  width: 100%;
+  font-size: 15px; }
+
+.login_button {
+  margin: 15px 0 0 0; }
+
+.wrapper-content {
+  padding: 0px 25px 25px;
+  max-width: 440px;
+  margin: 60px auto;
+  text-align: left;
+  background: white;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0px rgba(0, 0, 0, 0.1); }
+
+.new-account {
+  display: block;
+  margin-top: 10px; }
+
+.error, .errorlist {
+  padding: 0;
+  font-size: 14px;
+  color: #a94442;
+  list-style: none; }
+
+.form-signin {
+  padding: 15px;
+  margin: 0 auto; }
+  .form-signin .form-signin-heading {
+    margin-top: 15px;
+    margin-bottom: 10px; }
+  .form-signin .checkbox {
+    font-weight: normal; }
+  .form-signin p.terms {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #428bca; }
+  .form-signin label {
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: gray; }
+  .form-signin input {
+    border-radius: 0;
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .form-signin input:focus {
+      z-index: 2; }
+    .form-signin input[type="text"], .form-signin input[type="password"], .form-signin input[type="email"] {
+      width: 100%;
+      margin-bottom: -2px; }
+  .form-signin button[type="submit"] {
+    margin-top: 10px;
+    border-radius: 0; }

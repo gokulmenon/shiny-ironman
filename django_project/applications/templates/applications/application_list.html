@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% load static i18n humanize compressed %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    {% compressed_css 'portfolio_list' %}
+{% endblock %}
+
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans 'home' %}</a></li>
+        <li><a href="{% url 'portfolios:list' %}">{% trans 'application' %}</a></li>
+        {% if project %}
+            <li>{{ project.title }}</li>
+        {% endif %}
+    </ol>
+
+    <div class="page-header">
+        <h1>
+            {% if project %}
+                {{ project.title }}
+            {% endif %}
+            {% trans "application list" %}
+        </h1>
+
+        <div class="clearfix">
+            <div class="pull-left current_page">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </div>
+
+            {% if project %}
+                <div class="btn-group pull-right">
+                    <a type="button" class="btn btn-default" href="{% url 'applications:list' %}">
+                        {% trans 'My Applications' %}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <ul class="list-unstyled">
+        {% for application in application_list %}
+                <li>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a href="{% url 'applications:detail' application.pk %}">
+                                    {{ application.project.title }}
+                                </a>
+                                {% if application.project.over_deadline %}
+                                    <span class="badge pull-right text-muted">
+                                        {% trans "closed" %}
+                                    </span>
+                                {% else %}
+                                    <span class="badge pull-right bg-primary">
+                                        {% trans "open" %}
+                                    </span>
+                                {% endif %}
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row text-primary project_detail">
+                                <p class="col-md-6">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    {{ application.estimated_price|intcomma }} {% trans 'KRW (x 10,000)' %}
+                                </p>
+                                <p class="col-md-6">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    {{ application.estimated_days }}
+                                    {% trans "days" %}
+                                </p>
+                            </div>
+                            <p class="text-primary">
+                                <a class="text-primary" href="{% url 'users:detail' application.owner.username %}">
+                                    <i class="fa fa-user"></i>
+                                    {{ application.owner }}
+                                </a>
+                                <a class="text-info" href="{% url 'messages_compose_to' application.owner.username %}">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                                <span class="text-muted pull-right">
+                                    <abbr class="timeago" title="{{ application.created|date:'Y-m-d\TH:i:s' }}Z">{{ application.created }}</abbr>
+                                </span>
+                            </p>
+                            <a href="{% url 'applications:detail' application.pk %}">
+                                <p>
+                                    {{ application.description|truncatechars:150 }}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </a>
+        {% endfor %}
+    </ul>
+
+    {% if is_paginated %}
+        <div class="pagination_wrapper">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-chevron-left"></i></a></li>
+                {% endif %}
+                <li class="active"><a href="#">{{ page_obj.number }} </a></li>
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-chevron-right"></i></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock content %}

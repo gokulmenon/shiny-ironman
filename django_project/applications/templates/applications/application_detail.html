@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% load static i18n humanize %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    {% compressed_css 'portfolio_detail' %}
+{% endblock %}
+
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans 'home' %}</a></li>
+        <li><a href="{% url 'applications:list' %}">{% trans 'application' %}</a></li>
+        <li class="active">{{ application.owner }}</li>
+    </ol>
+
+    <div class="page-header">
+        <h1>
+            <a href="{% url 'projects:detail' application.project.pk %}">
+                {{ application.project.title }}
+            </a>
+            <small>
+                -
+                <a class="text-primary" href="{% url 'users:detail' application.owner.username %}">
+                    {{ application.owner }}
+                </a>
+                <a class="text-info" href="{% url 'messages_compose_to' application.owner.username %}">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </small>
+        </h1>
+    </div>
+
+    <div class="project_detail">
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ application.estimated_price|intcomma }} {% trans 'KRW (x 10,000)' %}
+        </p>
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ application.estimated_days }}
+            {% trans "days" %}
+        </p>
+    </div>
+
+    <pre>
+        {{ application.description|urlize|linebreaks }}
+    </pre>
+
+    {% if user == application.owner %}
+        <p class="text-right">
+            <a class="btn btn-default" href="{% url 'applications:form' application.project.pk application.pk %}" role="button">
+                {% trans "Edit" %}
+            </a>
+            <a class="btn btn-danger" href="{% url 'applications:delete' application.pk %}" role="button">
+                {% trans "Delete" %}
+            </a>
+        </p>
+    {% endif %}
+{% endblock content %}

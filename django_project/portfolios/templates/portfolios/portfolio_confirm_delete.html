@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load i18n crispy_forms_tags %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans "home" %}</a></li>
+        <li><a href="{% url 'portfolios:list' %}">{% trans 'portfolio' %}</a></li>
+        <li><a href="{% url 'portfolios:detail' portfolio.pk %}">{{ portfolio.title }}</a></li>
+    </ol>
+
+    <h1>
+        {{ portfolio.title }}
+        <small>
+            {% trans "Delete Portfolio" %}
+        </small>
+    </h1>
+
+    <p class="text-danger">
+        {% trans "Are you sure that you want to delete this portfolio? Remember, you can not cancel deletion." %}
+    </p>
+
+    <form action="." method="post" class="uniForm">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-danger pull-right" type="submit" value="{% trans 'Delete' %}">
+    </form>
+{% endblock %}

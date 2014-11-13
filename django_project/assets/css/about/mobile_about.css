@@ -1,0 +1,30 @@
+#body_container {
+  width: 100%;
+  padding: 0; }
+
+.navbar-brand, .navbar-right {
+  margin: 0 !important; }
+
+section {
+  width: 100%;
+  overflow: hidden;
+  background: #f6f8f8;
+  text-align: center; }
+  section.gluwa {
+    background-color: #22313f;
+    color: #ecf0f1; }
+  section .holder {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 61px 0 91px; }
+  section h1 {
+    margin: 0 0 24px;
+    text-align: center;
+    font-weight: 900; }
+  section h2 {
+    font-size: 58px;
+    line-height: 66px;
+    margin: 0 0 41px; }
+
+.base-footer {
+  margin-top: 0; }

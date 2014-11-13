@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% load static i18n humanize compressed %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    {% compressed_css project_list %}
+{% endblock %}
+
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans 'home' %}</a></li>
+        <li><a href="{% url 'projects:list' %}">{% trans 'project' %}</a></li>
+        {% if username %}
+            <li>{{ username }}</li>
+        {% endif %}
+    </ol>
+
+    <div class="page-header">
+        <h1>
+            {% if username %}
+                {{ username }}
+            {% endif %}
+            project list
+            {% if order_by %}
+                <small>
+                    {% trans 'ordered by' %} {{ order_by }}
+                </small>
+            {% endif %}
+        </h1>
+
+        <div class="clearfix">
+            <div class="pull-left current_page">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </div>
+
+            <div class="btn-group pull-right">
+                <a type="button" class="btn btn-default" href="{% url 'projects:form' %}">
+                    <i class="fa fa-plus"></i>
+                    {% trans 'Add Project' %}
+                </a>
+                <a type="button" class="btn btn-default" href="{% url 'home:project_management' %}">
+                    <i class="fa fa-graduation-cap"></i>
+                    {% trans 'Request Project Management' %}
+                </a>
+                {% if not user.is_anonymous %}
+                    <a type="button" class="btn btn-default" href="{% url 'projects:list' user.username %}">
+                        <i class="fa fa-user"></i>
+                        {% trans 'My Projects' %}
+                    </a>
+                {% endif %}
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-sort-amount-desc"></i> {% trans 'Sort' %}
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{% url 'projects:list' %}?order_by=price">Price</a></li>
+                    <li><a href="{% url 'projects:list' %}">Deadline</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% if not username %}
+        <p class="text-info">
+            {% trans "Uninspected projects are not seen publicly. Check my projects to read your uninspected projects." %}
+        </p>
+    {% endif %}
+
+    <ul class="list-unstyled">
+        {% for project in project_list %}
+            <a href="{% url 'projects:detail' project.pk %}">
+                <li>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                {{ project.title }}
+                                {% if project.over_deadline %}
+                                    <span class="badge pull-right text-muted">
+                                        {% trans "closed" %}
+                                    </span>
+                                {% else %}
+                                    <span class="badge pull-right bg-primary">
+                                        {% trans "open" %}
+                                    </span>
+                                {% endif %}
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row text-primary project_detail">
+                                <p class="col-md-3">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    {{ project.estimated_price|intcomma }} {% trans 'KRW (x 10,000)' %}
+                                </p>
+                                <p class="col-md-3">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    {{ project.estimated_period }}
+                                    {% trans "days" %}
+                                </p>
+                                <p class="col-md-3">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    {{ project.location }}
+                                </p>
+                                <p class="col-md-3">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    {{ project.deadline }}
+                                    {% trans 'deadline' %}
+                                </p>
+                            </div>
+                            <p>
+                                {{ project.description|truncatechars:130 }}
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </a>
+        {% endfor %}
+    </ul>
+
+    {% if is_paginated %}
+        <div class="pagination_wrapper">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-chevron-left"></i></a></li>
+                {% endif %}
+                <li class="active"><a href="#">{{ page_obj.number }} </a></li>
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-chevron-right"></i></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock content %}

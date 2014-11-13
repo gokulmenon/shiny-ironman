@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load staticfiles i18n cache %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    <link rel="stylesheet" media="only screen and (max-width: 768px)" href="{% static 'css/about/mobile_about.css' %}" />
+    <link rel="stylesheet" media="only screen and (min-width: 769px)" href="{% static 'css/about/about.css' %}" />
+{% endblock stylesheets %}
+
+{% block title %}{% trans 'About DodMe' %}{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="holder">
+            <h1>
+                <span class="logo_font">
+                    {% trans 'DodMe' %}
+                </span>
+                <small>[dɑ:tmɪ]</small>
+            </h1>
+            <p>
+                {% blocktrans %}
+                    'Dodme' is a Korean word for 'coarse sieve'.<br />
+                    We sift out the big and important things for you.
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+    <section class="gluwa">
+        <div class="holder">
+            <h1>
+                <span style="font-family: Helvetica Neue, Arial, sans-serif">
+                    {% trans 'gluwa' %}
+                </span>
+                <small>[gluːwa]</small>
+            </h1>
+            <p>
+                {% blocktrans %}
+                    Gluwa Inc. is a creative technology company based in Seoul, Korea. Founded in 2012,<br />
+                    the member of the company with a variety of creative and technological backgrounds work together<br />
+                    and build a unique product with aesthetic technology and functional design.
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+{% endblock content %}

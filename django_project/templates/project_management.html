@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{% trans 'Project Management' %}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-3">
+            <i class="fa fa-phone" style="font-size: 213pt;"></i>
+            <h5><i class="fa fa-map-marker"></i> {% trans 'Address' %}</h5>
+            <p>
+                {% blocktrans %}
+                    Gluwa Inc.
+                    Dossiebit 2 #1113<br />
+                    1328-11 Seocho 2-dong, Seocho-gu<br />
+                    Seoul, Republic of Korea<br />
+                    137-858
+                {% endblocktrans %}
+            </p>
+            <h5><i class="fa fa-phone"></i> {% trans 'Phone Number' %}</h5>
+            <p>
+                +82 070-8867-8403
+            </p>
+            <h5>@ {% trans 'E-mail' %}</h5>
+            <p>
+                dodme@gluwa.com
+            </p>
+            <h5><i class="fa fa-facebook"></i> {% trans 'Facebook' %}</h5>
+            <p>
+                <a href="//facebook.com/dodmecom">www.facebook.com/dodmecom</a>
+            </p>
+            <h5><i class="fa fa-suitcase"></i> {% trans 'Career' %}</h5>
+            <p>
+                {% blocktrans %}
+                    We are looking for talented people on an ongoing basis.
+                    Send us your CV with a cover letter at:
+                    <a href="mailto:dodme@gluwa.com" style="opacity: 0.5;">dodme@gluwa.com</a>.
+                {% endblocktrans %}
+            </p>
+        </div>
+        <div class="col-md-1 col-xs-0">
+        </div>
+        <div class="col-md-8">
+            <h1>
+                {% trans "Project Management Request" %}
+            </h1>
+
+            {% if result == 'success' %}
+                <p class="text-success">
+                    <strong>
+                        {% trans "Thank you! We will reply in a moment." %}
+                    </strong>
+                </p>
+            {% endif %}
+
+            <p class="text-info">
+                {% blocktrans %}
+                    Request project management service here.<br />
+                    DodMe's project management is a charged service.
+                    The cost depends on the size of your project.
+                    Of course, inquiries are free.
+                {% endblocktrans %}
+            </p>
+
+            <form action="../home/templates" method="post" class="uniForm">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input class="btn btn-primary pull-right" type="submit" value="{% trans 'Submit' %}">
+            </form>
+        </div>
+    </div>
+{% endblock content %}

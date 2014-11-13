@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load i18n crispy_forms_tags %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans "home" %}</a></li>
+        <li><a href="{% url 'applications:list' %}">{% trans 'application' %}</a></li>
+        <li><a href="{% url 'applications:detail' application.pk %}">{{ application.project.title }}</a></li>
+    </ol>
+
+    <h1>
+        {{ application.project.title }}
+        <small>
+            {% trans "Delete Application" %}
+        </small>
+    </h1>
+
+    <p class="text-danger">
+        {% trans "Are you sure that you want to delete this application? Remember, you can not cancel deletion." %}
+    </p>
+
+    <form action="." method="post" class="uniForm">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-danger pull-right" type="submit" value="{% trans 'Delete' %}">
+    </form>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% load staticfiles i18n compressed socialaccount %}
+
+{% block title %}
+	{% trans "Social Integration" %}
+{% endblock title %}
+
+{% block stylesheets %}
+	{{ block.super }}
+
+    {% compressed_css user_form %}
+{% endblock stylesheets %}
+
+{% block content %}
+    <div class="col-md-4">
+        {% include 'gluwa_user/user_form/side_nav.html' %}
+    </div>
+    <div class="col-md-8">
+        <div class="sns-login">
+            <h5 class="stit">{% trans "Connect to social network" %}</h5>
+            <ul class="list-inline">
+                <li>
+                    {% if facebook_connected %}
+                        <button class="btn btn-sns btn-facebook" id="btn_facebook" disabled="disabled">
+                            <i class="fa fa-facebook"></i> | {% trans "Facebook Connected" %}
+                        </button>
+                    {% else %}
+                        <a href="{% provider_login_url 'facebook' method='oauth2' process="connect" %}">
+                            <button class="btn btn-sns btn-facebook" id="btn_facebook">
+                                <i class="fa fa-facebook"></i> | {% trans "Connect with Facebook" %}
+                            </button>
+                        </a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if google_connected %}
+                        <button class="btn btn-sns btn-google-plus" id="btn_google" disabled="disabled">
+                            <i class="fa fa-google-plus"></i> | {% trans "Google+ Connected" %}
+                        </button>
+                    {% else %}
+                        <a href="{% provider_login_url 'google' process="connect" %}">
+                            <button class="btn btn-sns btn-google-plus" id="btn_google">
+                                <i class="fa fa-google-plus"></i> | {% trans "Connect with Google+" %}
+                            </button>
+                        </a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if twitter_connected %}
+                        <button class="btn btn-sns btn-twitter" id="btn_twitter" disabled="disabled">
+                            <i class="fa fa-twitter"></i> | {% trans "Twitter Connected" %}
+                        </button>
+                    {% else %}
+                        <a href="{% provider_login_url 'twitter' process="connect" %}">
+                            <button class="btn btn-sns btn-twitter" id="btn_twitter">
+                                <i class="fa fa-twitter"></i> | {% trans "Connect with Twitter" %}
+                            </button>
+                        </a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock content %}

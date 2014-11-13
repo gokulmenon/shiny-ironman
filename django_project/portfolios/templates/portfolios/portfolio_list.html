@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% load static i18n compressed %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    {% compressed_css portfolio_list %}
+    <link rel="stylesheet" media="only screen and (max-width: 768px)"
+          href="{% static 'portfolios/css/home/mobile_portfolio_list.css' %}" />
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+
+    <script type="text/javascript">
+        $('#search_portfolio_submit').click(function() {
+            $('#search_portfolio').submit();
+        });
+    </script>
+{% endblock javascript %}
+
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans 'home' %}</a></li>
+        <li><a href="{% url 'portfolios:list' %}">{% trans 'portfolio' %}</a></li>
+        {% if username %}
+            <li>{{ username }}</li>
+        {% endif %}
+    </ol>
+
+    <div class="page-header">
+        <h1>
+            {% if username %}
+                {{ username }}
+            {% endif %}
+            {% trans "portfolio list" %}
+        </h1>
+
+        <div class="clearfix">
+            <div class="pull-left current_page">
+                <form id="search_portfolio" class="hidden-xs hidden-sm" role="search" action=".">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input name="keyword" type="search" class="form-control"
+                                   placeholder="{% trans 'Search portfolio' %}"
+                                   {% if keyword %}
+                                    value="{{ keyword }}"
+                                   {% endif %}>
+                            <span id="search_portfolio_submit" class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="btn-group pull-right">
+                <a type="button" class="btn btn-default" href="{% url 'portfolios:form' %}">
+                    <i class="fa fa-plus"></i>
+                    {% trans 'Add Portfolio' %}
+                </a>
+                {% if not user.is_anonymous %}
+                    <a type="button" class="btn btn-default" href="{% url 'portfolios:list' user.username %}">
+                        <i class="fa fa-user"></i>
+                        {% trans 'My Portfolios' %}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <ul class="list-unstyled">
+        {% for portfolio in portfolio_list %}
+            <a href="{% url 'portfolios:detail' portfolio.pk %}">
+                <li>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                {{ portfolio.title }}
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-primary">
+                                {% if portfolio.owner.image %}
+                                    <img class="user_img" src="{{ portfolio.owner.image_url }}=s50-c">
+                                {% endif %}
+                                {{ portfolio.owner }}
+                                <span class="text-muted pull-right">
+                                    <abbr class="timeago" title="{{ portfolio.created|date:'Y-m-d\TH:i:s' }}Z">{{ portfolio.created }}</abbr>
+                                </span>
+                            </p>
+                            <p>
+                                {{ portfolio.description|truncatechars:130 }}
+                            </p>
+
+                            {% if portfolio.image %}
+                                <p>
+                                    <img class="img-responsive portfolio_img"
+                                         src="{{ portfolio.image_url }}=s150" alt="portfolio image">
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </li>
+            </a>
+        {% endfor %}
+    </ul>
+
+    <div class="pagination_wrapper">
+        {% if portfolio_list %}
+            <p>
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </p>
+        {% else %}
+            <p>
+                {% trans 'Your search did not match any portfolios.' %}
+            </p>
+        {% endif %}
+        {% if is_paginated %}
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-chevron-left"></i></a></li>
+                {% endif %}
+                <li class="active"><a href="#">{{ page_obj.number }} </a></li>
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-chevron-right"></i></a></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock content %}

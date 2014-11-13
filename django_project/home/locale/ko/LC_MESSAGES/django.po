@@ -1,0 +1,1811 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-12 18:19-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: applications/forms.py:9 projects/forms.py:11
+msgid "Estimated Price (10,000 KRW)"
+msgstr "예상 비용 (만원)"
+
+#: applications/models.py:22 portfolios/models.py:24 projects/models.py:20
+msgid "description"
+msgstr "설명"
+
+#: applications/models.py:23 projects/models.py:22
+msgid "estimated price"
+msgstr "예상 비용"
+
+#: applications/models.py:24
+msgid "estimated days"
+msgstr "예상 기간"
+
+#: applications/templates/applications/application_confirm_delete.html:12
+#: applications/templates/applications/application_detail.html:14
+#: applications/templates/applications/application_form.html:7
+#: applications/templates/applications/application_list.html:14
+#: portfolios/templates/portfolios/portfolio_confirm_delete.html:12
+#: portfolios/templates/portfolios/portfolio_detail.html:14
+#: portfolios/templates/portfolios/portfolio_form.html:7
+#: portfolios/templates/portfolios/portfolio_list.html:26
+#: projects/templates/projects/project_confirm_delete.html:12
+#: projects/templates/projects/project_detail.html:8
+#: projects/templates/projects/project_form.html:27
+#: projects/templates/projects/project_list.html:14
+msgid "home"
+msgstr "홈"
+
+#: applications/templates/applications/application_confirm_delete.html:13
+#: applications/templates/applications/application_detail.html:15
+#: applications/templates/applications/application_list.html:15
+msgid "application"
+msgstr "지원서"
+
+#: applications/templates/applications/application_confirm_delete.html:20
+msgid "Delete Application"
+msgstr "지원서 삭제"
+
+#: applications/templates/applications/application_confirm_delete.html:25
+msgid ""
+"Are you sure that you want to delete this application? Remember, you can not "
+"cancel deletion."
+msgstr ""
+"이 지원서를 삭제하고 싶으신 것 맞습니? 기억하세요, 삭제는 취소할 수 없습니다."
+
+#: applications/templates/applications/application_confirm_delete.html:31
+#: applications/templates/applications/application_detail.html:64
+#: portfolios/templates/portfolios/portfolio_confirm_delete.html:31
+#: portfolios/templates/portfolios/portfolio_detail.html:53
+#: projects/templates/projects/project_confirm_delete.html:31
+#: projects/templates/projects/project_detail.html:115
+msgid "Delete"
+msgstr "삭제"
+
+#: applications/templates/applications/application_detail.html:42
+#: applications/templates/applications/application_list.html:71
+#: projects/templates/projects/project_detail.html:63
+#: projects/templates/projects/project_list.html:97
+msgid "KRW (x 10,000)"
+msgstr "만원"
+
+#: applications/templates/applications/application_detail.html:50
+#: applications/templates/applications/application_form.html:55
+#: applications/templates/applications/application_list.html:79
+#: projects/templates/projects/project_detail.html:71
+#: projects/templates/projects/project_list.html:105
+msgid "days"
+msgstr "일"
+
+#: applications/templates/applications/application_detail.html:61
+#: portfolios/templates/portfolios/portfolio_detail.html:50
+#: projects/templates/projects/project_detail.html:112
+msgid "Edit"
+msgstr "수정"
+
+#: applications/templates/applications/application_form.html:8
+#: projects/templates/projects/project_confirm_delete.html:13
+#: projects/templates/projects/project_detail.html:9
+#: projects/templates/projects/project_form.html:28
+#: projects/templates/projects/project_list.html:15
+msgid "project"
+msgstr "프로젝트"
+
+#: applications/templates/applications/application_form.html:10
+msgid "apply"
+msgstr "지원"
+
+#: applications/templates/applications/application_form.html:15
+#: projects/templates/projects/project_detail.html:124
+msgid "Apply"
+msgstr "지원"
+
+#: applications/templates/applications/application_form.html:60
+#: projects/templates/projects/project_detail.html:76
+msgid ""
+"Above is a subject to change upon negotiation. Use it as reference purposes "
+"only."
+msgstr "상기된 내용은 협의 될 사항입니다. 참고용으로만 사용하시기 바랍니다."
+
+#: applications/templates/applications/application_form.html:64
+#: projects/templates/projects/project_form.html:44
+msgid ""
+"\n"
+"            There is no restriction whatsoever in sharing your contact "
+"information.\n"
+"            Please feel free to put your e-mail, phone number to get in "
+"touch with others.\n"
+"        "
+msgstr ""
+"\n"
+"            연락처 공개에 제약은 전혀 없습니다.\n"
+"            자유롭게 이메일, 전화번호를 입력하시고 다른 분들과 소통하세요.\n"
+"        "
+
+#: applications/templates/applications/application_form.html:77
+#: home/templates/contact.html:60 home/templates/estimate.html:73
+#: home/templates/project_management.html:69
+#: portfolios/templates/portfolios/portfolio_form.html:30
+#: projects/templates/projects/project_form.html:56
+msgid "Submit"
+msgstr "입력"
+
+#: applications/templates/applications/application_list.html:26
+msgid "application list"
+msgstr "지원서 목록"
+
+#: applications/templates/applications/application_list.html:37
+#: home/templates/base.html:91
+msgid "My Applications"
+msgstr "내 지원서들"
+
+#: applications/templates/applications/application_list.html:55
+#: projects/templates/projects/project_list.html:81
+msgid "closed"
+msgstr "마감 완료"
+
+#: applications/templates/applications/application_list.html:59
+#: projects/templates/projects/project_list.html:85
+msgid "open"
+msgstr "지원 가능"
+
+#: applications/templates/applications/mail/new_application_body.txt:1
+#, python-format
+msgid ""
+"%(applicant_name)s has applied to your project %(project_title)s.\n"
+"\n"
+"You can read the application at the link below.\n"
+"\n"
+"%(site_url)s%(application_url)s"
+msgstr ""
+"%(applicant_name)s 님께서 회원님의 %(project_title)s 프로젝트에 지원하셨습니"
+"다.\n"
+"\n"
+"지원서는 아래의 링크에서 확인하실 수 있습니다.\n"
+"\n"
+"%(site_url)s%(application_url)s"
+
+#: applications/templates/applications/mail/new_application_subject.txt:1
+#, python-format
+msgid "[%(site_name)s] New Application for %(project_title)s"
+msgstr "[%(site_name)s] %(project_title)s의 새 지원서"
+
+#: custom_user/admin.py:13
+msgid "Personal info"
+msgstr "개인정보"
+
+#: custom_user/admin.py:14
+msgid "Permissions"
+msgstr "권한"
+
+#: custom_user/admin.py:16
+msgid "Important dates"
+msgstr "주요 날짜들"
+
+#: custom_user/forms.py:22
+msgid "A user with that email already exists."
+msgstr "그 이메일은 가진 사용자는 이미 존재합니다."
+
+#: custom_user/forms.py:23
+msgid "A user with that username already exists."
+msgstr "그 사용자 이름을 가진 사용자가 이미 존재합니다."
+
+#: custom_user/forms.py:24 custom_user/forms.py:92
+msgid "That username cannot be used."
+msgstr "그 사용자 이름은 사용 될 수 없습니다."
+
+#: custom_user/forms.py:26 custom_user/forms.py:29 custom_user/forms.py:95
+#: custom_user/forms.py:154 custom_user/forms.py:155
+msgid "Username"
+msgstr "사용자 이름"
+
+#: custom_user/forms.py:31 custom_user/forms.py:156
+msgid "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "필수입니다. 글자, 숫자, 그리고 @/./+/-/_만 사용해 30자 이하."
+
+#: custom_user/forms.py:34
+msgid "This value may contain only letters and numbers."
+msgstr "이 값은 문자와 숫자만 입력하실 수 있습니다"
+
+#: custom_user/forms.py:36 custom_user/forms.py:38 custom_user/forms.py:100
+#: home/templates/contact.html:25 home/templates/estimate.html:25
+#: home/templates/project_management.html:25
+msgid "E-mail"
+msgstr "이메일"
+
+#: custom_user/forms.py:40
+msgid "Required. Valid active e-mail addresses only."
+msgstr "필수. 올바른 이메일 주소만 사용할 수 있습니다."
+
+#: custom_user/forms.py:42
+msgid "This value may contain only valid e-mail addresses only."
+msgstr "이 값은 이메일 주소만 포함할 수 있습니다"
+
+#: custom_user/forms.py:43
+msgid "password"
+msgstr "비밀번호"
+
+#: custom_user/forms.py:45 custom_user/forms.py:101
+msgid "Password"
+msgstr "비밀번호"
+
+#: custom_user/forms.py:73 custom_user/forms.py:125
+msgid ""
+"Registration using disposable email addresses is prohibited.             "
+"Please supply a different email address."
+msgstr ""
+"일회용 이메일 주소로 가입하는 것은 불허합니다.             다른 이메일 주소"
+"를 입력해 주세요."
+
+#: custom_user/forms.py:96
+msgid "Required. 30 characters or fewer. Letters and digits only."
+msgstr "필수입니다. 30자 혹은 그 이하의 문자와 숫자만 입력해 주세요."
+
+#: custom_user/forms.py:98 custom_user/forms.py:159
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
+msgstr "이 값은 문자, 숫자 그리고 @/./+/-/_만 포함할 수 있습니다."
+
+#: custom_user/forms.py:102
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user's "
+"password, but you can change the password using <a href=\"password/\">this "
+"form</a>."
+msgstr ""
+"암호화 되지 않은 비밀번호는 저장 되지 않기 때문에 사용자의 비밀번호를 알 수 "
+"있는 방법은 없습니다만.하지만 <a href=\"password/\">이 양식</a>을 통해 비밀번"
+"호를 변경하실 수 있습니다."
+
+#: custom_user/forms.py:106 custom_user/forms.py:107 custom_user/forms.py:162
+#: custom_user/forms.py:163
+msgid "About"
+msgstr "자기 소개"
+
+#: custom_user/forms.py:150
+msgid "Image"
+msgstr "이미지"
+
+#: custom_user/forms.py:188 portfolios/forms.py:27
+msgid "Image file too large ( > 1 MB )"
+msgstr "이미지 파일이 너무 큽니다 ( > 1 MB )"
+
+#: custom_user/forms.py:195
+msgid "I have read and agree to the Terms of Service"
+msgstr "이용약관을 모두 읽고 동의하였습니다"
+
+#: custom_user/forms.py:196
+msgid "You must agree to the terms to register"
+msgstr "가입하시려면 약관에 동의해 주셔야합니다"
+
+#: custom_user/models.py:19
+msgid "about"
+msgstr "자기 소개"
+
+#: custom_user/templates/custom_user/user_detail.html:38
+#: home/templates/base.html:68
+msgid "projects"
+msgstr "프로젝트"
+
+#: custom_user/templates/custom_user/user_detail.html:41
+#: home/templates/base.html:69
+msgid "portfolios"
+msgstr "포트폴리오"
+
+#: custom_user/templates/custom_user/user_detail.html:45
+msgid "profile"
+msgstr "프로필"
+
+#: custom_user/templates/custom_user/user_form.html:6
+#: home/templates/base.html:86
+msgid "Profile"
+msgstr "프로필"
+
+#: custom_user/templates/custom_user/user_form.html:38
+msgid ""
+"\n"
+"                                    Maximum file size is 1 MB.<br/>\n"
+"                                    Recommended size is 150 px by 150 px.\n"
+"                                "
+msgstr ""
+"\n"
+"                                    파일 사이즈는 최대 1 MB입니다.<br/>\n"
+"                                    권장 크기는 150 px x 150 px 입니다.\n"
+"                                "
+
+#: custom_user/templates/custom_user/user_form.html:48
+msgid ""
+"This email is not validated yet. Please validate it to use DodMe with full "
+"functionality."
+msgstr ""
+"이 이메일은 아직 인증되지 않았습니다. 도드미의 모든 기능을 사용하시기 위해 인"
+"증해 주시기 바랍니다."
+
+#: custom_user/templates/custom_user/user_form.html:49
+msgid "Resend Verification E-mail"
+msgstr "인증 메일 재전송"
+
+#: custom_user/templates/custom_user/user_form.html:57
+msgid ""
+"\n"
+"                    There is no restriction whatsoever in sharing your "
+"contact information.\n"
+"                    Please feel free to put your e-mail, phone number to get "
+"in touch with others.\n"
+"                "
+msgstr ""
+"\n"
+"            연락처를 공개 제약은 전혀 없습니다.\n"
+"            자유롭게 이메일, 전화번호를 입력하시고 다른 분들과 소통하세요.\n"
+"        "
+
+#: custom_user/templates/custom_user/user_form.html:62
+msgid "Update Profile"
+msgstr "프로필 수정"
+
+#: custom_user/templates/custom_user/user_form_social.html:6
+msgid "Social Integration"
+msgstr "소셜 연동"
+
+#: custom_user/templates/custom_user/user_form_social.html:21
+msgid "Connect to social network"
+msgstr "SNS와 연결"
+
+#: custom_user/templates/custom_user/user_form_social.html:26
+msgid "Facebook Connected"
+msgstr "페이스북 연결 됨"
+
+#: custom_user/templates/custom_user/user_form_social.html:31
+msgid "Connect with Facebook"
+msgstr "페이스북과 연결"
+
+#: custom_user/templates/custom_user/user_form_social.html:39
+msgid "Google+ Connected"
+msgstr "구글+ 연결 됨"
+
+#: custom_user/templates/custom_user/user_form_social.html:44
+msgid "Connect with Google+"
+msgstr "구글+와 연결"
+
+#: custom_user/templates/custom_user/user_form_social.html:52
+msgid "Twitter Connected"
+msgstr "트위터 연결 됨"
+
+#: custom_user/templates/custom_user/user_form_social.html:57
+msgid "Connect with Twitter"
+msgstr "트위터와 연결"
+
+#: home/forms.py:13 home/forms.py:50
+msgid "name"
+msgstr "이름"
+
+#: home/forms.py:14 home/forms.py:51
+msgid "e-mail"
+msgstr "이메일"
+
+#: home/forms.py:15 home/forms.py:52
+msgid "phone number"
+msgstr "전화번호"
+
+#: home/forms.py:16 home/forms.py:53 portfolios/models.py:23
+#: projects/models.py:19
+msgid "title"
+msgstr "제목"
+
+#: home/forms.py:17 home/forms.py:54
+msgid "body"
+msgstr "본문"
+
+#: home/templates/404.html:5
+msgid "Page Not Found"
+msgstr "페이지를 찾을 수 없습니다"
+
+#: home/templates/404.html:9
+msgid "This is not the page you were looking for."
+msgstr "이건 찾으시던 페이지가 아닙니다."
+
+#: home/templates/404.html:15
+msgid "... and this is the face of DodMe octopus in shock."
+msgstr "... 그리고 이건 충격 받은 도드미 문어의 얼굴입니다."
+
+#: home/templates/500.html:5
+msgid "Server Error"
+msgstr "서버 에러"
+
+#: home/templates/500.html:9
+msgid "There was a server error."
+msgstr "서버 에러가 발생했습니다."
+
+#: home/templates/500.html:15
+msgid ""
+"\n"
+"            ... and this is the face of DodMe octopus in shame.<br/>\n"
+"            DodMe engineers are automatically notified with your error.<br/"
+">\n"
+"            DodMe octopus will peck them until they debug it for you.<br/>\n"
+"        "
+msgstr ""
+"\n"
+"        ... 그리고 이건 창피해 하는 도드미 문어의 얼굴입니다.<br/>\n"
+"        도드미 기술자들은 이용자님의 에러를 자동적으로 통보 받았습니다.<br/"
+">\n"
+"        도드미 문어는 그들이 그것을 해결할 때까지 괴롭히고 있습니다.<br/>\n"
+"    "
+
+#: home/templates/about.html:12
+msgid "About DodMe"
+msgstr "도드미에 대해"
+
+#: home/templates/about.html:19
+msgid "DodMe"
+msgstr "도드미"
+
+#: home/templates/about.html:24
+msgid ""
+"\n"
+"                    'Dodme' is a Korean word for 'coarse sieve'.<br />\n"
+"                    We sift out the big and important things for you.\n"
+"                "
+msgstr ""
+"\n"
+"                    '도드미'는 '구멍이 굵은 체'를 뜻하는 순우리말입니다.<br /"
+">\n"
+"                    여러분들을 위해 크고 중요한 것들을 걸러 드리도록 하겠습니"
+"다.\n"
+"                "
+
+#: home/templates/about.html:35
+msgid "gluwa"
+msgstr ""
+
+#: home/templates/about.html:40
+msgid ""
+"\n"
+"                    Gluwa Inc. is a creative technology company based in "
+"Seoul, Korea. Founded in 2012,<br />\n"
+"                    the member of the company with a variety of creative and "
+"technological backgrounds work together<br />\n"
+"                    and build a unique product with aesthetic technology and "
+"functional design.\n"
+"                "
+msgstr ""
+"\n"
+"글루와는 대한민국 서울에 위치한 창의적인 기술 회사입니다. 2012년에 설립 된 "
+"후,<br />\n"
+"다양한 창의적이고 기술적인 배경을 가진 회사의 구성원들은 협력을 통해<br />\n"
+"아름다운 기술과 기능적인 디자인을 가진 독특한 제품들을 만들고 있습니다.\n"
+"                "
+
+#: home/templates/base.html:67
+msgid "estimate"
+msgstr "견적"
+
+#: home/templates/base.html:70
+msgid "my applications"
+msgstr "나의 지원서"
+
+#: home/templates/base.html:71
+msgid "request management"
+msgstr "PM 신청"
+
+#: home/templates/base.html:76
+msgid "LOGIN"
+msgstr ""
+
+#: home/templates/base.html:87
+msgid "Social Connections"
+msgstr "소셜 연결"
+
+#: home/templates/base.html:88 templates/account/password_change.html:7
+#: templates/account/password_change.html:10
+#: templates/account/password_change.html:15
+#: templates/account/password_reset_from_key.html:6
+#: templates/account/password_reset_from_key.html:9
+#: templates/account/password_reset_from_key_done.html:5
+#: templates/account/password_reset_from_key_done.html:8
+msgid "Change Password"
+msgstr "비밀번호 변경"
+
+#: home/templates/base.html:89
+#: projects/templates/projects/project_list.html:51
+msgid "My Projects"
+msgstr "내 프로젝트들"
+
+#: home/templates/base.html:90
+msgid "My Portfolio"
+msgstr "내 포트폴리오"
+
+#: home/templates/base.html:93 home/templates/base.html.py:96
+msgid "Logout"
+msgstr "로그아웃"
+
+#: home/templates/base.html:116 home/templates/start_base.html:86
+msgid "About Company"
+msgstr "회사 소개"
+
+#: home/templates/base.html:122 home/templates/start_base.html:92
+#: home/templates/terms.html:5 templates/account/signup.html:80
+msgid "Terms of Service"
+msgstr "이용약관"
+
+#: home/templates/base.html:128 home/templates/start_base.html:98
+#: templates/account/signup.html:84
+msgid "Privacy"
+msgstr "계정정보 보호정책"
+
+#: home/templates/base.html:134 home/templates/start_base.html:104
+msgid "Contact"
+msgstr "연락처"
+
+#: home/templates/contact.html:5
+msgid "Contact Information"
+msgstr "연락 정보"
+
+#: home/templates/contact.html:11 home/templates/estimate.html:11
+#: home/templates/project_management.html:11
+msgid "Address"
+msgstr "주소"
+
+#: home/templates/contact.html:13 home/templates/estimate.html:13
+#: home/templates/project_management.html:13
+msgid ""
+"\n"
+"                    Gluwa Inc.\n"
+"                    Dossiebit 2 #1113<br />\n"
+"                    1328-11 Seocho 2-dong, Seocho-gu<br />\n"
+"                    Seoul, Republic of Korea<br />\n"
+"                    137-858\n"
+"                "
+msgstr ""
+"\n"
+"서울시 서초구 서초2동 1328-11번지<br />\n"
+"도씨에빛2차 1113호 (주) 글루와<br />\n"
+"137-858\n"
+"                "
+
+#: home/templates/contact.html:21 home/templates/estimate.html:21
+#: home/templates/project_management.html:21
+msgid "Phone Number"
+msgstr "전화번호"
+
+#: home/templates/contact.html:29 home/templates/estimate.html:29
+#: home/templates/project_management.html:29 templates/account/login.html:34
+#: templates/account/signup.html:31
+msgid "Facebook"
+msgstr "페이스북"
+
+#: home/templates/contact.html:33 home/templates/estimate.html:33
+#: home/templates/project_management.html:33
+msgid "Career"
+msgstr "구인"
+
+#: home/templates/contact.html:35 home/templates/estimate.html:35
+#: home/templates/project_management.html:35
+msgid ""
+"\n"
+"                    We are looking for talented people on an ongoing basis.\n"
+"                    Send us your CV with a cover letter at:\n"
+"                    <a href=\"mailto:dodme@gluwa.com\" style=\"opacity: 0.5;"
+"\">dodme@gluwa.com</a>.\n"
+"                "
+msgstr ""
+"\n"
+"                    저희는 재능있는 분들을 늘 찾고 있습니다.\n"
+"                    이력서와 자기 소개서를\n"
+"                    <a href=\"mailto:dodme@gluwa.com\" style=\"opacity: 0.5;"
+"\">dodme@gluwa.com</a>으로 보내주세요.\n"
+"                "
+
+#: home/templates/contact.html:46
+msgid "Contact Us"
+msgstr ""
+
+#: home/templates/contact.html:52 home/templates/estimate.html:52
+#: home/templates/project_management.html:52
+msgid "Thank you! We will reply in a moment."
+msgstr "감사합니다! 곧 답변드리겠습니다."
+
+#: home/templates/estimate.html:5
+msgid "Project Estimation"
+msgstr "프로젝트 견적"
+
+#: home/templates/estimate.html:46
+msgid "Project Estimation Consulting"
+msgstr "프로젝트 견적 문의"
+
+#: home/templates/estimate.html:58
+msgid ""
+"\n"
+"                    Would you like to know appropriate cost of your project?"
+"<br />\n"
+"                    DodMe experts will give you some idea! For Free!\n"
+"                "
+msgstr ""
+"\n"
+"                    프로젝트의 적절한 견적이 궁금하십니까?<br />\n"
+"                    도드미 전문가들이 무료로 상담해 드리겠습니다!\n"
+"                "
+
+#: home/templates/estimate.html:65
+msgid ""
+"\n"
+"                    Request is served by order of arrival.\n"
+"                "
+msgstr ""
+"\n"
+"                    요청은 선착순으로 처리 됩니다.\n"
+"                "
+
+#: home/templates/home.html:17
+msgid ""
+"\n"
+"                    DodMe is a <strong class=\"text-info\">FREE</strong> job "
+"posting web site for all developers.<br />\n"
+"                    Our main goal is to <strong>connect</strong> developers "
+"with projects looking for them.\n"
+"                "
+msgstr ""
+"\n"
+"도드미는 모든 개발자들을 위한 <strong class=\"text-info\">무료</strong> 외주 "
+"프로젝트 중개 사이트입니다.<br />\n"
+"저희의 목표는 개발자들과 그들을 찾는 프로젝트를 <strong>연결</strong>시켜 드"
+"리는 것입니다.\n"
+"                "
+
+#: home/templates/home.html:22 home/templates/start.html:21
+msgid "Post Project"
+msgstr "프로젝트 등록"
+
+#: home/templates/home.html:23 home/templates/start.html:22
+msgid "Post Portfolio"
+msgstr "포트폴리오 등록"
+
+#: home/templates/home.html:31
+msgid ""
+"\n"
+"                    The key of project success is in project management.<br /"
+">\n"
+"                    DodMe provide you top notch project management service\n"
+"                    that covers your project from start to the end.<br />\n"
+"                    Our project managers are experts of the industry from\n"
+"                    <span class=\"text-info\">\n"
+"                    Samsung Electronics, Naver, Ahnlab, Nexon, and Toshiba</"
+"span>,<br />\n"
+"                    whom hold degrees of M.S. and Ph.D from <span class="
+"\"text-info\">POSTECH, Seoul National University, and KAIST</span>.\n"
+"                "
+msgstr ""
+"\n"
+"                    프로젝트 성공의 핵심은 프로젝트 매니지먼트에 있습니다."
+"<br />\n"
+"                    도드미는 프로젝트의 시작 단계부터 마지막 단계에 이르기까"
+"지 최고의 프로젝트 매니지먼트 서비스를 제공합니다.<br />\n"
+"                    저희 프로젝트 매니저들은\n"
+"                    <span class=\"text-info\">\n"
+"                    삼성전자, 네이버, 안랩, 넥슨 그리고 도시바</span> 출신의,"
+"<br />\n"
+"                    <span class=\"text-info\">포항공과대학교, 서울대학교, "
+"KAIST, Carnegie Mellon University</span>에서 석사 혹은 박사 학위를 수여 받은 "
+"업계 최고의 전문가들입니다.\n"
+"                "
+
+#: home/templates/home.html:41
+msgid "How PM Works?"
+msgstr ""
+
+#: home/templates/home.html:91
+msgid "Project Planning"
+msgstr "프로젝트 기획"
+
+#: home/templates/home.html:93
+msgid ""
+"\n"
+"                                There is a difference between idea and plan."
+"<br />\n"
+"                                We map out your great idea in to a "
+"constructable master plan.\n"
+"                            "
+msgstr ""
+"\n"
+"아이디어와 기획에는 차이가 있습니다.<br />\n"
+"저희는 당신의 뛰어난 아이디어를 제작 가능한 마스터 플랜으로 그려 드립니다.\n"
+"                            "
+
+#: home/templates/home.html:100
+msgid "Developer Selection"
+msgstr "개발자 선정"
+
+#: home/templates/home.html:102
+msgid ""
+"\n"
+"                                Hiring a developer is difficult.<br />\n"
+"                                Hiring a <strong>right</strong> developer is "
+"an impossible task for layman.<br />\n"
+"                                Leave it to our experts to classify gems and "
+"stones.\n"
+"                            "
+msgstr ""
+"\n"
+"                                개발자를 뽑는 것은 어렵습니다.<br />\n"
+"                                비전문가가 <strong>좋은</strong> 개발자를 뽑"
+"는 것은 불가능합니다.<br />\n"
+"                                저희 전문가들이 옥석을 가려드리겠습니다.\n"
+"                            "
+
+#: home/templates/home.html:112
+msgid "Progress Check"
+msgstr "진행 확인"
+
+#: home/templates/home.html:114
+msgid ""
+"\n"
+"                                We see beyond the screen;<br />\n"
+"                                we <strong>read</strong> your code and "
+"analyze its progress and problem.\n"
+"                            "
+msgstr ""
+"\n"
+"저희는 직접 코드를 <strong>읽어서</strong> 진행 상황과 문제점을 분석합니다.\n"
+"                            "
+
+#: home/templates/home.html:121
+msgid "Quality Assurance"
+msgstr "품질 점검"
+
+#: home/templates/home.html:123
+msgid ""
+"\n"
+"                                \"Good testers are worth their weight in "
+"gold.\"<br />\n"
+"                                - Jeff Atwood, the founder of <a href=\"//"
+"www.stackoverflow.com\" target=\"_blank\">stackoverflow</a>\n"
+"                            "
+msgstr ""
+"\n"
+"                                \"좋은 테스터들을 그들의 몸무게 만큼의 황금"
+"과 같은 가치를 갖고 있다.\"<br />\n"
+"                                - 제프 앳우드, <a href=\"//www.stackoverflow."
+"com\" target=\"_blank\">스택오버플로우</a>의 창립자\n"
+"                            "
+
+#: home/templates/home.html:210
+#: projects/templates/projects/project_list.html:46
+msgid "Request Project Management"
+msgstr "PM 신청하기"
+
+#: home/templates/privacy.html:5
+msgid "Privacy Policy"
+msgstr "개인정보 보호정책"
+
+#: home/templates/project_management.html:5
+msgid "Project Management"
+msgstr ""
+
+#: home/templates/project_management.html:46
+msgid "Project Management Request"
+msgstr "PM 요청"
+
+#: home/templates/project_management.html:58
+msgid ""
+"\n"
+"                    Request project management service here.<br />\n"
+"                    DodMe's project management is a charged service.\n"
+"                    The cost depends on the size of your project.\n"
+"                    Of course, inquiries are free.\n"
+"                "
+msgstr ""
+"\n"
+"프로젝트 매니지먼트 서비스는 이곳에서 신청하세요.<br />\n"
+"도드미의 프로젝트 매니지먼트는 유료 서비스이며,\n"
+"그 비용은 프로젝트의 사이즈에 따라 다릅니다.\n"
+"물론, 문의는 무료입니다.\n"
+"                "
+
+#: home/templates/start.html:17
+msgid ""
+"\n"
+"                    You can now start developing your project :)\n"
+"                "
+msgstr ""
+
+#: home/templates/start.html:29
+msgid ""
+"\n"
+"                    Ennui leggings scenester cardigan gluten-free XOXO, "
+"Carles paleo Banksy. Vice craft beer biodiesel fashion axe. Mlkshk Truffaut "
+"roof party you probably haven't heard of them occupy. American Apparel "
+"Truffaut Intelligentsia roof party, forage PBR&B Austin stumptown ennui\n"
+"                "
+msgstr ""
+
+#: home/templates/start.html:36
+msgid "Ennui Leggings"
+msgstr ""
+
+#: home/templates/start.html:38
+msgid ""
+"\n"
+"                                Food truck crucifix Pitchfork Wes Anderson. "
+"Kickstarter freegan seitan pork belly semiotics church-key, Shoreditch banh "
+"mi biodiesel Pinterest deep v keytar. Bespoke selfies Truffaut sartorial, "
+"master cleanse Pitchfork ugh fixie locavore Austin whatever Etsy Neutra "
+"pickled skateboard. Slow-carb ennui bitters, art party asymmetrical hashtag "
+"brunch Pitchfork Neutra hoodie synth drinking vinegar fingerstache meh. "
+"Mixtape Austin single-origin coffee cornhole Cosby sweater\n"
+"                            "
+msgstr ""
+
+#: home/templates/start.html:44
+msgid "Free XOXO"
+msgstr ""
+
+#: home/templates/start.html:46
+msgid ""
+"\n"
+"                                Cosby sweater, letterpress Etsy vinyl meh "
+"PBR vegan photo booth semiotics. Keffiyeh paleo yr craft beer, disrupt "
+"tousled fanny pack Helvetica vinyl sartorial pour-over twee. Single-origin "
+"coffee aesthetic twee, paleo quinoa drinking vinegar beard post-ironic "
+"typewriter.\n"
+"                            "
+msgstr ""
+
+#: home/templates/start.html:54
+msgid "Shoreditch Schlitz"
+msgstr ""
+
+#: home/templates/start.html:56
+msgid ""
+"\n"
+"                                IPhone Odd Future organic, skateboard "
+"tattooed 3 wolf moon art party keffiyeh banjo slow-carb twee kogi "
+"letterpress beard. Stumptown gastropub flexitarian, swag ennui typewriter "
+"tofu drinking vinegar VHS four loko letterpress +1 meggings cred pickled. "
+"Tofu mustache Truffaut Wes Anderson. Lo-fi master cleanse stumptown, put a "
+"bird on it chambray brunch sriracha semiotics\n"
+"                            "
+msgstr ""
+
+#: home/templates/start.html:62
+msgid "8-bit fixie"
+msgstr ""
+
+#: home/templates/start.html:64
+msgid ""
+"\n"
+"                                typewriter Marfa synth deep v pickled. Retro "
+"Tumblr 3 wolf moon, selfies vinyl Echo Park squid bespoke vegan disrupt "
+"tofu. Direct trade selfies brunch, keytar tofu synth church-key squid "
+"bitters biodiesel Pitchfork umami tattooed next level Neutra. Roof party "
+"Blue Bottle typewriter, distillery Kickstarter farm-to-table Banksy YOLO.\n"
+"                            "
+msgstr ""
+
+#: home/templates/start.html:71
+msgid "Shop Plugins"
+msgstr ""
+
+#: portfolios/forms.py:25
+msgid "Not allowed filetype. Please use jpg, jpeg, gif, png, or bmp."
+msgstr ""
+"허용되지 않는 파일형식입니다. jpg, jpeg, gif, png 혹은 bmp를 사용해 주세요."
+
+#: portfolios/models.py:25
+msgid "image"
+msgstr "이미지"
+
+#: portfolios/templates/portfolios/portfolio_confirm_delete.html:13
+#: portfolios/templates/portfolios/portfolio_detail.html:15
+#: portfolios/templates/portfolios/portfolio_form.html:8
+#: portfolios/templates/portfolios/portfolio_list.html:27
+msgid "portfolio"
+msgstr "포트폴리오"
+
+#: portfolios/templates/portfolios/portfolio_confirm_delete.html:20
+msgid "Delete Portfolio"
+msgstr "포트폴리오 삭제"
+
+#: portfolios/templates/portfolios/portfolio_confirm_delete.html:25
+msgid ""
+"Are you sure that you want to delete this portfolio? Remember, you can not "
+"cancel deletion."
+msgstr ""
+"이 포트폴리오를 삭제하고 싶으신 것 맞습니? 기억하세요, 삭제는 취소할 수 없습"
+"니다."
+
+#: portfolios/templates/portfolios/portfolio_form.html:12
+#: portfolios/templates/portfolios/portfolio_form.html:20
+msgid "Create Portfolio"
+msgstr "포트폴리오 생성"
+
+#: portfolios/templates/portfolios/portfolio_form.html:18
+msgid "Edit Portfolio"
+msgstr "포트폴리오 수정"
+
+#: portfolios/templates/portfolios/portfolio_form.html:28
+msgid "Maximum file size is 1 MB."
+msgstr "최대 파일 크기는 1MB입니다."
+
+#: portfolios/templates/portfolios/portfolio_list.html:38
+msgid "portfolio list"
+msgstr "포트폴리오 목록"
+
+#: portfolios/templates/portfolios/portfolio_list.html:47
+msgid "Search portfolio"
+msgstr "포트폴리오 검색"
+
+#: portfolios/templates/portfolios/portfolio_list.html:62
+msgid "Add Portfolio"
+msgstr "포트폴리오 추가"
+
+#: portfolios/templates/portfolios/portfolio_list.html:67
+msgid "My Portfolios"
+msgstr "내 포트폴리오"
+
+#: portfolios/templates/portfolios/portfolio_list.html:118
+msgid "Your search did not match any portfolios."
+msgstr "검색 된 포트폴리오가 없습니다."
+
+#: projects/forms.py:9
+msgid "Title"
+msgstr "제목"
+
+#: projects/forms.py:10
+msgid "Location"
+msgstr "위치"
+
+#: projects/forms.py:12
+msgid "Estimated Time (DAYS)"
+msgstr "예상 기간 (일)"
+
+#: projects/forms.py:13
+msgid "Deadline (YYYY-MM-DD)"
+msgstr "마감일 (YYYY-MM-DD)"
+
+#: projects/models.py:21
+msgid "location"
+msgstr "지역"
+
+#: projects/models.py:23
+msgid "estimated period in days"
+msgstr "예상 소요일"
+
+#: projects/models.py:24 projects/templates/projects/project_detail.html:56
+#: projects/templates/projects/project_list.html:120
+msgid "deadline"
+msgstr "마감"
+
+#: projects/models.py:25
+msgid "inspected"
+msgstr "검수 완료"
+
+#: projects/templates/projects/project_confirm_delete.html:20
+msgid "Delete Project"
+msgstr "프로젝트 삭제"
+
+#: projects/templates/projects/project_confirm_delete.html:25
+msgid ""
+"Are you sure that you want to delete this project? Remember, you can not "
+"cancel deletion."
+msgstr ""
+"이 프로젝트를 삭제하고 싶으신 것 맞습니? 기억하세요, 삭제는 취소할 수 없습니"
+"다."
+
+#: projects/templates/projects/project_detail.html:29
+msgid "applications"
+msgstr "지원서"
+
+#: projects/templates/projects/project_detail.html:35
+msgid "Project Application List"
+msgstr "프로젝트 지원서 목록"
+
+#: projects/templates/projects/project_detail.html:80
+msgid "Conditions seem not reasonable enough? Suggest an alternative!"
+msgstr "조건이 마음 들지 않으세요? 보다 합리적인 조건을 제시해보세요!"
+
+#: projects/templates/projects/project_detail.html:82
+msgid "Send suggestion"
+msgstr "제안 보내기"
+
+#: projects/templates/projects/project_detail.html:93
+msgid "approved project"
+msgstr "승인 프로젝트"
+
+#: projects/templates/projects/project_detail.html:95
+msgid "unapproved project"
+msgstr "승인 전 프로젝트"
+
+#: projects/templates/projects/project_detail.html:105
+msgid "UnApprove"
+msgstr "승인 취소"
+
+#: projects/templates/projects/project_detail.html:107
+msgid "Approve"
+msgstr "승인"
+
+#: projects/templates/projects/project_detail.html:120
+msgid "Closed"
+msgstr "닫힘"
+
+#: projects/templates/projects/project_form.html:32
+#: projects/templates/projects/project_form.html:40
+msgid "Create Project"
+msgstr "프로젝트 생성"
+
+#: projects/templates/projects/project_form.html:38
+msgid "Edit Project"
+msgstr "프로젝트 수정"
+
+#: projects/templates/projects/project_form.html:50
+msgid ""
+"Project appears to the others shortly after inspection of DodMe "
+"administrators."
+msgstr ""
+"프로젝트는 도드미 관리자가 검수한 뒤에 곧바로 다른 이들에게 노출 됩니다."
+
+#: projects/templates/projects/project_list.html:29
+msgid "ordered by"
+msgstr "정렬 방식"
+
+#: projects/templates/projects/project_list.html:42
+msgid "Add Project"
+msgstr "프로젝트 추가"
+
+#: projects/templates/projects/project_list.html:55
+msgid "Sort"
+msgstr "정렬"
+
+#: projects/templates/projects/project_list.html:67
+msgid ""
+"Uninspected projects are not seen publicly. Check my projects to read your "
+"uninspected projects."
+msgstr ""
+"검수되지 않은 프로젝트들은 공개 되지 않습니다. 검수 되지 않은 자신의 프로젝트"
+"는 \"내 프로젝트들\"에서 확인 하실 수 있습니다."
+
+#: templates/account/account_inactive.html:5
+#: templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "비활성 계정"
+
+#: templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "이 계정은 비활성 상태입니다."
+
+#: templates/account/email.html:6
+msgid "Account"
+msgstr "계정"
+
+#: templates/account/email.html:9
+msgid "E-mail Addresses"
+msgstr "이메일 주소들"
+
+#: templates/account/email.html:11
+msgid "The following e-mail addresses are associated with your account:"
+msgstr "다음 이메일 주소들이 당신의 계정에 연결되어 있습니다:"
+
+#: templates/account/email.html:25
+msgid "Verified"
+msgstr "인증 완료"
+
+#: templates/account/email.html:27
+msgid "Unverified"
+msgstr "인증 미완"
+
+#: templates/account/email.html:29
+msgid "Primary"
+msgstr "대표"
+
+#: templates/account/email.html:35
+msgid "Make Primary"
+msgstr "대표로 만들기"
+
+#: templates/account/email.html:36
+msgid "Re-send Verification"
+msgstr "인증 다시 보내기"
+
+#: templates/account/email.html:37 templates/socialaccount/connections.html:38
+msgid "Remove"
+msgstr "제거"
+
+#: templates/account/email.html:44
+msgid "Warning:"
+msgstr "경고:"
+
+#: templates/account/email.html:44
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: templates/account/email.html:49
+msgid "Add E-mail Address"
+msgstr "이메일 주소 추가"
+
+#: templates/account/email.html:54
+msgid "Add E-mail"
+msgstr "이메일 추가"
+
+#: templates/account/email.html:63
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr "정말 선택하신 이메일 주소들을 제거하시길 원하십니까?"
+
+#: templates/account/email_confirm.html:7
+#: templates/account/email_confirm.html:11
+#: templates/account/email_confirmed.html:6
+#: templates/account/email_confirmed.html:11
+#: templates/account/email/email_confirmation_subject.txt:3
+msgid "Confirm E-mail Address"
+msgstr "이메일 주소 확인"
+
+#: templates/account/email_confirm.html:17
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+"<a href=\"mailto:%(email)s\">%(email)s</a>이 사용자 %(user_display)s의 이메"
+"일 주소임을 확인해 주시기 바랍니다."
+
+#: templates/account/email_confirm.html:21
+msgid "Confirm"
+msgstr "확인"
+
+#: templates/account/email_confirm.html:28
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"이 이메일 확인 링크는 기한이 만료되었거나 잘못 되었습니다. <a href="
+"\"%(email_url)s\">새로운 이메일 인증 요청</a>을 해주시기 바랍니다"
+
+#: templates/account/email_confirmed.html:15
+#, python-format
+msgid ""
+"You have confirmed that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-"
+"mail address for user %(user_display)s."
+msgstr ""
+"Y<a href=\"mailto:%(email)s\">%(email)s</a>이 사용자 %(user_display)s의 이메"
+"일임을 인증하셨습니다."
+
+#: templates/account/login.html:6 templates/account/login.html.py:22
+#: templates/account/login.html:85 templates/account/signup.html:58
+msgid "Login"
+msgstr "로그인"
+
+#: templates/account/login.html:27 templates/account/signup.html:24
+msgid "Connect with social network"
+msgstr "SNS로 연결"
+
+#: templates/account/login.html:44 templates/account/signup.html:41
+msgid "Google+"
+msgstr "구글+"
+
+#: templates/account/login.html:54 templates/account/signup.html:51
+msgid "Twitter"
+msgstr "트위터"
+
+#: templates/account/login.html:62 templates/account/signup.html:60
+msgid "Register with E-mail address"
+msgstr "이메일 주소로 가입하기"
+
+#: templates/account/login.html:65
+msgid "Register"
+msgstr "가입"
+
+#: templates/account/login.html:68
+msgid "Login with username"
+msgstr "사용자 이름으로 로그인"
+
+#: templates/account/login.html:69 templates/account/signup.html:63
+msgid "Find password"
+msgstr "비밀번호 찾기"
+
+#: templates/account/logout.html:6 templates/account/logout.html.py:9
+#: templates/account/logout.html:18
+msgid "Sign Out"
+msgstr "로그아웃"
+
+#: templates/account/logout.html:11
+msgid "Are you sure you want to sign out?"
+msgstr "정말 로그아웃 하시겠습니까?"
+
+#: templates/account/password_reset.html:8
+#: templates/account/password_reset.html:12
+#: templates/account/password_reset_done.html:6
+#: templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr "비밀번호 재설정"
+
+#: templates/account/password_reset.html:17
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"비밀번호를 잊어 버리셨나요? 아래에 이메일 주소를 입력해 주시면 재설정 이메일"
+"을 보내드리겠습니다."
+
+#: templates/account/password_reset.html:22
+msgid "Reset My Password"
+msgstr "내 비밀번호 재설정"
+
+#: templates/account/password_reset.html:25
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+"비밀번호 재설정에 어려움을 겪으신다면 dodme@gluwa.com으로 연락해 주시기 바랍"
+"니다."
+
+#: templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"이메일을 전송해드렸습니다. 몇 분내로 이메일을 받지 못하시면 저희에게 연락해 "
+"주시기 바랍니다."
+
+#: templates/account/password_reset_from_key.html:9
+msgid "Bad Token"
+msgstr "잘못된 토큰"
+
+#: templates/account/password_reset_from_key.html:13
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"이 재설정 링크는 이미 사용 되었기 때문에 무효합니다.<a href="
+"\"%(passwd_reset_url)s\">비밀번호 재설정을 다시 요청</a>헤 주시기 바랍니다."
+
+#: templates/account/password_reset_from_key.html:19
+msgid "change password"
+msgstr "비밀번호 변경"
+
+#: templates/account/password_reset_from_key.html:22
+#: templates/account/password_reset_from_key_done.html:9
+msgid "Your password is now changed."
+msgstr "비밀번호가 변경되셨습니다."
+
+#: templates/account/password_set.html:7
+#: templates/account/password_set.html:10
+#: templates/account/password_set.html:15
+msgid "Set Password"
+msgstr "비밀번호 설정"
+
+#: templates/account/signup.html:6
+msgid "Registration"
+msgstr "가입"
+
+#: templates/account/signup.html:91
+msgid "Join"
+msgstr "가입"
+
+#: templates/account/signup_closed.html:6
+#: templates/account/signup_closed.html:9
+msgid "Sign Up Closed"
+msgstr "가입 불가"
+
+#: templates/account/signup_closed.html:11
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "죄송합니다만, 현재 가입은 닫혀있습니다."
+
+#: templates/account/verification_sent.html:5
+#: templates/account/verification_sent.html:8
+#: templates/account/verified_email_required.html:6
+#: templates/account/verified_email_required.html:9
+msgid "Verify Your E-mail Address"
+msgstr "당신의 이메일 주소를 인증해 주세요"
+
+#: templates/account/verification_sent.html:10
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"인증을 위해 이메일을 전송하였습니다. 부여 된 링크를 따라 가입 절차를 마무리 "
+"해 주시기 바랍니다. 몇 분내로 이메일을 받지 못하시면 저희에게 연락해 주시기 "
+"바랍니다."
+
+#: templates/account/verified_email_required.html:13
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+
+#: templates/account/verified_email_required.html:17
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: templates/account/verified_email_required.html:21
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"User %(user_display)s at %(site_name)s has given this as an email address.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s\n"
+msgstr ""
+"%(user_display)s님께서 %(site_name)s에 이 이메일 주소를 입력하셨습니다.\n"
+"\n"
+"인증을 위해 이 주소로 들어와 주시기 바랍니다, %(activate_url)s\n"
+
+#: templates/account/email/password_reset_key_message.txt:1
+#, python-format
+msgid ""
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account at %(site_domain)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+"사용자님 혹은 누군가가 %(site_domain)s의 계정 비밀번호를 요청해 이 이메일을 "
+"받으셨습니다.\n"
+"비밀번호 재설정을 원하지 않으신다면 무시하셔도 안전합니다. 비밀번호를 재설정 "
+"하시려면 아래의 링크를 클릭해 주세요."
+
+#: templates/account/email/password_reset_key_message.txt:6
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: templates/account/email/password_reset_key_message.txt:8
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr "비밀번호 변경 이메일"
+
+#: templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr ""
+
+#: templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr ""
+
+#: templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr ""
+
+#: templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr ""
+
+#: templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr ""
+
+#: templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr "로그아웃하셨습니다."
+
+#: templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr "비밀번호가 성공적으로 변경되었습니다."
+
+#: templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr "비밀번호가 성공적으로 설정되었습니다."
+
+#: templates/account/messages/primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr "기본 이메일 주소가 지정되었습니다."
+
+#: templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr "기본 이메일 주소가 인증되었습니다."
+
+#: templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr "주의"
+
+#: templates/account/snippets/already_logged_in.html:5
+#, python-format
+msgid "you are already logged in as %(user_display)s."
+msgstr "이미 %(user_display)s로 로그인 중이십니다."
+
+#: templates/socialaccount/authentication_error.html:5
+#: templates/socialaccount/authentication_error.html:8
+msgid "Social Network Login Failure"
+msgstr "소셜 네트워크 로그인 실패"
+
+#: templates/socialaccount/authentication_error.html:10
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr "소셜 네트워크 계정으로 로그인 시도 중 에러가 발생하였습니다."
+
+#: templates/socialaccount/connections.html:6
+#: templates/socialaccount/connections.html:10
+msgid "Account Connections"
+msgstr "연결 계정들"
+
+#: templates/socialaccount/connections.html:14
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr "다음 외부 계정들을 사용해 로그인 하실 수 있습니다:"
+
+#: templates/socialaccount/connections.html:44
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr "현재 연결 된 소셜 네트워크 계정들이 없습니다."
+
+#: templates/socialaccount/connections.html:47
+msgid "Add a 3rd Party Account"
+msgstr "외부 계정 연결"
+
+#: templates/socialaccount/login_cancelled.html:6
+#: templates/socialaccount/login_cancelled.html:10
+msgid "Login Cancelled"
+msgstr "로그인 취소"
+
+#: templates/socialaccount/login_cancelled.html:14
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr ""
+"기존 계정들 중 하나로 저희 사이트에 로그인하지 않기로 하셨습니다. 실수였다"
+"면, 다시 <a href=\"%(login_url)s\">로그인</a>해 주시기 바랍니다."
+
+#: templates/socialaccount/signup.html:7
+msgid "Signup"
+msgstr "가입"
+
+#: templates/socialaccount/signup.html:10
+#: templates/socialaccount/signup.html:21
+msgid "Sign Up"
+msgstr "가입"
+
+#: templates/socialaccount/signup.html:12
+#, python-format
+msgid ""
+"You are about to use your %(provider_name)s account to login to\n"
+"%(site_name)s. As a final step, please complete the following form:"
+msgstr ""
+"%(site_name)s에 로그인하기 위해 %(provider_name)s의 계정을 입력 중이십니다.\n"
+"마지막 단계를 위해 아래의 양식을 완성해 주시기 바랍니다:"
+
+#: templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr "이 소셜 계정이 연결되었습니다."
+
+#: templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr "이 소셜 계정은 이미 다른 계정에 연결 되었습니다."
+
+#: templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr " 소셜 계정은 연결 해제 되었습니다."
+
+#~ msgid "Usernames can only contain letters, digits and @/./+/-/_."
+#~ msgstr "이 값은 문자, 숫자 그리고 @/./+/-/_만 포함할 수 있습니다."
+
+#~ msgid "Username can not be used. Please use other username."
+#~ msgstr "사용자 이름이 사용될 수 없습니다. 다른 사용자 이름을 입력해 주세요."
+
+#~ msgid "This username is already taken. Please choose another."
+#~ msgstr "이미 사용 중인 사용자 이름입니다. 다른 것을 선택해 주세요."
+
+#~ msgid "Accounts"
+#~ msgstr "계정들"
+
+#~ msgid "Password must be a minimum of {0} characters."
+#~ msgstr "비밀번호는 최소 {0} 글자여야합니다."
+
+#~ msgid "Remember Me"
+#~ msgstr "로그인 기억하기"
+
+#~ msgid "This account is currently inactive."
+#~ msgstr "이 계정은 비활성 상태입니다."
+
+#~ msgid "The e-mail address and/or password you specified are not correct."
+#~ msgstr "인력하신 이메일 주소와 비밀번호가 올바르지 않습니다."
+
+#~ msgid "The username and/or password you specified are not correct."
+#~ msgstr "인력하신 사용자 이름과 비밀번호가 올바르지 않습니다."
+
+#~ msgid "The login and/or password you specified are not correct."
+#~ msgstr "인력하신 로그인과 비밀번호가 올바르지 않습니다."
+
+#~ msgid "E-mail address"
+#~ msgstr "이메일 주소들"
+
+#~ msgid "Username or e-mail"
+#~ msgstr "사용자 이름 혹은 이메일"
+
+#~ msgctxt "field label"
+#~ msgid "Login"
+#~ msgstr "로그인"
+
+#~ msgid "E-mail (optional)"
+#~ msgstr "이메일 (선택)"
+
+#~ msgid "A user is already registered with this e-mail address."
+#~ msgstr "그 이메일 주소로 가입한 사용자가 이미 존재합니다."
+
+#~ msgid "Password (again)"
+#~ msgstr "비밀번호 (재입력)"
+
+#~ msgid "You must type the same password each time."
+#~ msgstr "두번 다 같은 비밀번호를 입력해야합니다."
+
+#~ msgid "This e-mail address is already associated with this account."
+#~ msgstr "그 이메일 주소는 이미 이 계정에 연결되어 있습니다."
+
+#~ msgid "This e-mail address is already associated with another account."
+#~ msgstr "그 이메일 주소는 이미 다른 계정에 연결되어 있습니다."
+
+#~ msgid "Current Password"
+#~ msgstr "현재 비밀번호"
+
+#~ msgid "New Password"
+#~ msgstr "새 비밀번호"
+
+#~ msgid "New Password (again)"
+#~ msgstr "새 비밀번호 (재입력)"
+
+#~ msgid "Please type your current password."
+#~ msgstr "현재 비밀번호를 입력해 주세요."
+
+#~ msgid "The e-mail address is not assigned to any user account"
+#~ msgstr "그 이메일 주소는 어떤 사용자 계정에도 연결되어 있지 않습니다"
+
+#~ msgid "user"
+#~ msgstr "사용자"
+
+#~ msgid "e-mail address"
+#~ msgstr "이메일 주소"
+
+#~ msgid "verified"
+#~ msgstr "인증됨"
+
+#~ msgid "primary"
+#~ msgstr "대표"
+
+#~ msgid "email address"
+#~ msgstr "이메일 주소"
+
+#~ msgid "email addresses"
+#~ msgstr "이메일 주소들"
+
+#~ msgid "created"
+#~ msgstr "생성 됨"
+
+#~ msgid "sent"
+#~ msgstr "전송 됨"
+
+#~ msgid "key"
+#~ msgstr "키"
+
+#~ msgid "email confirmation"
+#~ msgstr "이메일 확인"
+
+#~ msgid "email confirmations"
+#~ msgstr "이메일 확인들"
+
+#~ msgid "Your account has no password set up."
+#~ msgstr "비밀번호 설정이 되어 있지 않습니다."
+
+#~ msgid "Your account has no verified e-mail address."
+#~ msgstr "사용자님의 계정에 인증된 이메일 주소가 없습니다."
+
+#~ msgid "Social Accounts"
+#~ msgstr "소셜 계정들"
+
+#~ msgid ""
+#~ "An account already exists with this e-mail address. Please sign in to "
+#~ "that account first, then connect your %s account."
+#~ msgstr ""
+#~ "그 이메일 주소를 사용하는 계정이 이미 존재 합니다. 그 계정으로 먼저 로그"
+#~ "인 하신 뒤, 그 계정에 %s account 계정을 연결해 주세요."
+
+#~ msgid "provider"
+#~ msgstr "제공자"
+
+#~ msgid "Key"
+#~ msgstr "키"
+
+#~ msgid "social application"
+#~ msgstr "소셜 앱"
+
+#~ msgid "social applications"
+#~ msgstr "소셜 앱들"
+
+#~ msgid "last login"
+#~ msgstr "마지막 로그인"
+
+#~ msgid "date joined"
+#~ msgstr "가입일"
+
+#~ msgid "social account"
+#~ msgstr "소셜 계정"
+
+#~ msgid "social accounts"
+#~ msgstr "소셜 계정들"
+
+#~ msgid "social application token"
+#~ msgstr "소셜 앱 토큰"
+
+#~ msgid "social application tokens"
+#~ msgstr "소셜 앱 토큰들"
+
+#~ msgid "Sign In"
+#~ msgstr "로그인"
+
+#~ msgid "or"
+#~ msgstr "혹은"
+
+#~ msgid "Forgot Password?"
+#~ msgstr "비밀번호를 잊어버리셨습니까?"
+
+#~ msgid "OpenID Sign In"
+#~ msgstr "OpenID 로그인"
+
+#~ msgid "Python files"
+#~ msgstr "파이썬 파일들"
+
+#~ msgid "Profiling"
+#~ msgstr "프로파일링"
+
+#~ msgid "Signals"
+#~ msgstr "시그널들"
+
+#~ msgid "SQL"
+#~ msgstr "SQL"
+
+#~ msgid "Versions"
+#~ msgstr "버전들"
+
+#~ msgid "Close"
+#~ msgstr "닫힘"
+
+#~ msgid "Function"
+#~ msgstr "기능"
+
+#, fuzzy
+#~ msgid "Count"
+#~ msgstr "계정"
+
+#, fuzzy
+#~ msgid "View information"
+#~ msgstr "이메일 확인"
+
+#, fuzzy
+#~ msgid "Signal"
+#~ msgstr "가입"
+
+#, fuzzy
+#~ msgid "Timeline"
+#~ msgstr "마감"
+
+#, fuzzy
+#~ msgid "Action"
+#~ msgstr "위치"
+
+#, fuzzy
+#~ msgid "SQL Profiled"
+#~ msgstr "프로필"
+
+#, fuzzy
+#~ msgid "Toggle Context"
+#~ msgstr "구글+ 연결 됨"
+
+#, fuzzy
+#~ msgid "Version"
+#~ msgstr "권한"
+
+#, fuzzy
+#~ msgid "All users"
+#~ msgstr "사용자"
+
+#, fuzzy
+#~ msgid "sent at"
+#~ msgstr "전송 됨"
+
+#, fuzzy
+#~ msgid "Message successfully sent."
+#~ msgstr "비밀번호가 성공적으로 설정되었습니다."
+
+#, fuzzy
+#~ msgid "Message successfully deleted."
+#~ msgstr "비밀번호가 성공적으로 설정되었습니다."
+
+#, fuzzy
+#~ msgid "Message successfully recovered."
+#~ msgstr "비밀번호가 성공적으로 변경되었습니다."
+
+#, fuzzy
+#~ msgid "delete"
+#~ msgstr "삭제"
+
+#, fuzzy
+#~ msgid "undelete"
+#~ msgstr "삭제"
+
+#~ msgid "modified"
+#~ msgstr "수정됨"
+
+#, fuzzy
+#~ msgid "deleted"
+#~ msgstr "삭제"
+
+#, fuzzy
+#~ msgid "Re-send activation emails"
+#~ msgstr "인증 메일 재전송"
+
+#, fuzzy
+#~ msgid ""
+#~ "This email address is already in use. Please supply a different email "
+#~ "address."
+#~ msgstr ""
+#~ "일회용 이메일 주소로 가입하는 것은 불허합니다.             다른 이메일 주"
+#~ "소를 입력해 주세요."
+
+#, fuzzy
+#~ msgid ""
+#~ "Registration using free email addresses is prohibited. Please supply a "
+#~ "different email address."
+#~ msgstr ""
+#~ "일회용 이메일 주소로 가입하는 것은 불허합니다.             다른 이메일 주"
+#~ "소를 입력해 주세요."
+
+#, fuzzy
+#~ msgid "registration profile"
+#~ msgstr "가입"
+
+#, fuzzy
+#~ msgid "registration profiles"
+#~ msgstr "가입"
+
+#, fuzzy
+#~ msgid "Deprecated"
+#~ msgstr "생성 됨"
+
+#, fuzzy
+#~ msgid " (deprecated)"
+#~ msgstr "생성 됨"
+
+#, fuzzy
+#~ msgid "Navigation"
+#~ msgstr "지원서"
+
+#, fuzzy
+#~ msgid "Contents"
+#~ msgstr "연락처"
+
+#~ msgid "[image: %s]"
+#~ msgstr "[이미지: %s]"
+
+#~ msgid "[image]"
+#~ msgstr "(이미지)"
+
+#~ msgid "Your search did not match any results."
+#~ msgstr "검색 된 포트폴리오가 없습니다."

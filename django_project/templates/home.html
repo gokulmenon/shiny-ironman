@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% load static i18n compressed %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    {% compressed_css 'home' %}
+{% endblock stylesheets %}
+
+{% block content %}
+    <section>
+        <div class="holder">
+            <h1 class="logo_font">DodMe</h1>
+            <p>
+                {% blocktrans %}
+                    DodMe is a <strong class="text-info">FREE</strong> job posting web site for all developers.<br />
+                    Our main goal is to <strong>connect</strong> developers with projects looking for them.
+                {% endblocktrans %}
+            </p>
+            <a href="{% url 'projects:form' %}" class="btn btn-default">{% trans 'Post Project' %}</a>
+            <a href="{% url 'portfolios:form' %}" class="btn btn-primary">{% trans 'Post Portfolio' %}</a>
+        </div>
+    </section>
+    <section class="project_management">
+        <div class="holder">
+            <h2>Project Management</h2>
+            <img src="{% static 'flat-ui/img/Map.png' %}">
+            <p style="margin-top: 36px;">
+                {% blocktrans %}
+                    The key of project success is in project management.<br />
+                    DodMe provide you top notch project management service
+                    that covers your project from start to the end.<br />
+                    Our project managers are experts of the industry from
+                    <span class="text-info">
+                    Samsung Electronics, Naver, Ahnlab, Nexon, and Toshiba</span>,<br />
+                    whom hold degrees of M.S. and Ph.D from <span class="text-info">POSTECH, Seoul National University, and KAIST</span>.
+                {% endblocktrans %}
+            </p>
+            <h3 style="color: #3498db;">{% trans 'How PM Works?' %}</h3>
+            <div class="webtoon">
+                <img src="{% static 'img/webtoon/pm/1.png' %}">
+                <img src="{% static 'img/webtoon/pm/2.png' %}">
+                <img src="{% static 'img/webtoon/pm/3.png' %}">
+                <img src="{% static 'img/webtoon/pm/4.png' %}">
+                <img src="{% static 'img/webtoon/pm/5.png' %}">
+                <img src="{% static 'img/webtoon/pm/6.png' %}">
+                <img src="{% static 'img/webtoon/pm/7.png' %}">
+            </div>
+            <ul class="list list-unstyled">
+                <div class="row">
+                    <li class="col-md-6">
+                        <h3>{% trans 'Project Planning' %}</h3>
+                        <p>
+                            {% blocktrans %}
+                                There is a difference between idea and plan.<br />
+                                We map out your great idea in to a constructable master plan.
+                            {% endblocktrans %}
+                        </p>
+                    </li>
+                    <li class="col-md-6">
+                        <h3>{% trans 'Developer Selection' %}</h3>
+                        <p>
+                            {% blocktrans %}
+                                Hiring a developer is difficult.<br />
+                                Hiring a <strong>right</strong> developer is an impossible task for layman.<br />
+                                Leave it to our experts to classify gems and stones.
+                            {% endblocktrans %}
+                        </p>
+                    </li>
+                </div>
+                <div class="row">
+                    <li class="col-md-6">
+                        <h3>{% trans 'Progress Check' %}</h3>
+                        <p>
+                            {% blocktrans %}
+                                We see beyond the screen;<br />
+                                we <strong>read</strong> your code and analyze its progress and problem.
+                            {% endblocktrans %}
+                        </p>
+                    </li>
+                    <li class="col-md-6">
+                        <h3>{% trans 'Quality Assurance' %}</h3>
+                        <p>
+                            {% blocktrans %}
+                                "Good testers are worth their weight in gold."<br />
+                                - Jeff Atwood, the founder of <a href="//www.stackoverflow.com" target="_blank">stackoverflow</a>
+                            {% endblocktrans %}
+                        </p>
+                    </li>
+                </div>
+            </ul>
+            <a href="{% url 'home:contact' %}" class="btn btn-default">{% trans 'Request Project Management' %}</a>
+        </div>
+    </section>
+{% endblock content %}

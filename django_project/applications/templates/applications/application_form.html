@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load i18n crispy_forms_tags %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans "home" %}</a></li>
+        <li><a href="{% url 'projects:list' %}">{% trans 'project' %}</a></li>
+        <li><a href="{% url 'projects:detail' project.pk %}">{{ project.title }}</a></li>
+        <li>{% trans "apply" %}</li>
+    </ol>
+
+    <div class="page-header">
+        <h1>
+            {% trans "Apply" %}
+        </h1>
+    </div>
+
+    <h3>
+        {{ project.title }}
+        <small>
+            - {{ project.owner }}
+        </small>
+    </h3>
+
+    <div class="project_detail">
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.location }}
+        </p>
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.deadline }}
+        </p>
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.estimated_price }}
+            KRW
+        </p>
+        <p class="col-md-6">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+            </span>
+            {{ project.estimated_period }}
+            {% trans "days" %}
+        </p>
+    </div>
+
+    <p class="text-warning">
+        {% trans "Above is a subject to change upon negotiation. Use it as reference purposes only." %}
+    </p>
+
+    <p class="text-info">
+        {% blocktrans %}
+            There is no restriction whatsoever in sharing your contact information.
+            Please feel free to put your e-mail, phone number to get in touch with others.
+        {% endblocktrans %}
+    </p>
+
+    <p>
+        {{ project.description|urlize|linebreaks }}
+    </p>
+
+    <form action="." method="post" class="uniForm">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-primary pull-right" type="submit" value="{% trans 'Submit' %}">
+    </form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load i18n crispy_forms_tags %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans "home" %}</a></li>
+        <li><a href="{% url 'portfolios:list' %}">{% trans 'portfolio' %}</a></li>
+        {% if portfolio %}
+            <li><a href="{% url 'portfolios:detail' portfolio.pk %}">{{ portfolio.title }}</a></li>
+        {% else %}
+            <li>{% trans 'Create Portfolio' %}</li>
+        {% endif %}
+    </ol>
+
+    <h1>
+        {% if portfolio %}
+            {% trans "Edit Portfolio" %}
+        {% else %}
+            {% trans "Create Portfolio" %}
+        {% endif %}
+    </h1>
+
+    <form action="." method="post" enctype="multipart/form-data" class="uniForm">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <p class="text-info">
+            {% trans "Maximum file size is 1 MB." %}
+        </p>
+        <input class="btn btn-primary pull-right" type="submit" value="{% trans 'Submit' %}">
+    </form>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% load i18n %}{% blocktrans %}{{ applicant_name }} has applied to your project {{ project_title }}.
+
+You can read the application at the link below.
+
+{{ site_url }}{{ application_url }}{% endblocktrans %}

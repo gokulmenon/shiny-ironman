@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% load static i18n compressed %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    {% compressed_css 'portfolio_detail' %}
+{% endblock %}
+
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/">{% trans 'home' %}</a></li>
+        <li><a href="{% url 'portfolios:list' %}">{% trans 'portfolio' %}</a></li>
+        <li>{{ portfolio.title }}</li>
+    </ol>
+
+    <div class="page-header">
+        <h1>
+            {% if portfolio.owner.image %}
+                <img class="user_img" src="{{ portfolio.owner.image_url }}=s45-c">
+            {% endif %}
+            {{ portfolio.title }}
+            <small>
+                -
+                <a class="text-primary" href="{% url 'users:detail' portfolio.owner.username %}">
+                    {{ portfolio.owner }}
+                </a>
+                <a class="text-info" href="{% url 'messages_compose_to' portfolio.owner.username %}">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </small>
+        </h1>
+    </div>
+
+    <pre>
+        {{ portfolio.description|urlize|linebreaks }}
+    </pre>
+
+    {% if portfolio.image %}
+        <p>
+            <img class="img-responsive portfolio_img" src="{{ portfolio.image_url }}=s0" alt="portfolio image">
+        </p>
+    {% endif %}
+
+    {% if user == portfolio.owner %}
+        <p class="text-right">
+            <a class="btn btn-default" href="{% url 'portfolios:form' portfolio.pk %}" role="button">
+                {% trans "Edit" %}
+            </a>
+            <a class="btn btn-danger" href="{% url 'portfolios:delete' portfolio.pk %}" role="button">
+                {% trans "Delete" %}
+            </a>
+        </p>
+    {% endif %}
+{% endblock content %}

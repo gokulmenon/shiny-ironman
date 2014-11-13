@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% load staticfiles i18n compressed socialaccount %}
+
+{% block title %}
+	{% trans "Registration" %}
+{% endblock title %}
+
+{% block stylesheets %}
+	{{ block.super }}
+
+    <link rel='stylesheet' href='{% static 'registration/css/registration.css' %}' />
+    <link rel='stylesheet' href='{% static 'registration/css/social-buttons.css' %}' />
+{% endblock stylesheets %}
+
+{% block content %}
+    <div id="bg">
+        <img src="{% static 'registration/img/register/background.jpg' %}" alt="">
+    </div>
+    <div class="wrapper-content" id="container-wrapper">
+        <div class="form-signin">
+            <h1 class="stit">JOIN</h1>
+            <div class="sns-login">
+                <h5 class="stit">{% trans "Connect with social network" %}</h5>
+                <ul class="list-inline row">
+                    <li class="col-md-4 col-xs-4">
+                        <a href="{% provider_login_url 'facebook' method='oauth2' %}">
+                            <button class="btn btn-sns btn-facebook" id="btn_facebook">
+                                <i class="fa fa-facebook"></i>
+                                <span class="hidden-xs hidden-sm">
+                                    | {% trans "Facebook" %}
+                                </span>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="col-md-4 col-xs-4">
+                        <a href="{% provider_login_url 'google' %}">
+                            <button class="btn btn-sns btn-google-plus" id="btn_google">
+                                <i class="fa fa-google-plus"></i>
+                                <span class="hidden-xs hidden-sm">
+                                    | {% trans "Google+" %}
+                                </span>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="col-md-4 col-xs-4">
+                        <a href="{% provider_login_url 'twitter' %}">
+                            <button class="btn btn-sns btn-twitter" id="btn_twitter">
+                                <i class="fa fa-twitter"></i>
+                                <span class="hidden-xs hidden-sm">
+                                    | {% trans "Twitter" %}
+                                </span>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a class="login_button btn btn-lg btn-primary btn-block" href="{{ login_url }}">{% trans "Login" %}</a>
+            <p class="form-signin-heading stit">
+                {% trans "Register with E-mail address" %}
+                <span class="pull-right">
+                    <a href="{% url 'account_reset_password' %}">
+                        {% trans "Find password" %}
+                    </a>
+                </span>
+            </p>
+            <form method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {# Include the hidden fields #}
+                {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+                {% endfor %}
+                {# Include the visible fields #}
+                {% for field in form.visible_fields %}
+                    {{ field.errors }}
+                    {% if field.name == 'tos' %}
+                        <p class="terms">
+                            <a href="{% url 'home:terms' %}" target="_blank">
+                                {% trans "Terms of Service" %}
+                            </a>
+                            ·
+                            <a href="{% url 'home:privacy' %}" target="_blank">
+                                {% trans "Privacy" %}
+                            </a>
+                        </p>
+                        {{ field.label_tag }}
+                    {% endif %}
+                    {{ field }}
+                {% endfor %}
+                <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Join" %}</button>
+            </form>
+        </div>
+    </div> <!-- /container -->
+{% endblock content %}
+
+
+
+
+
+
+{% comment %}
+{% extends "account/base.html" %}
+
+{% load url from future %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Sign Up" %}</h1>
+
+<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+
+<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+</form>
+
+
+{% endblock %}
+
+
+{% endcomment %}

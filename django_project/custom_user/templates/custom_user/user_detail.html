@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% load staticfiles i18n compressed %}
+
+{% block title %}
+	{{ object.username }}
+{% endblock title %}
+
+{% block meta %}
+	{{ block.super }}
+
+    <meta name="description" content="{{ object.username }}">
+    <meta name="author" content="{{ object.username }}">
+{% endblock meta %}
+
+{% block stylesheets %}
+	{{ block.super }}
+
+    {% compressed_css user_detail %}
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 text-center">
+        <h1 id="page_user_username">
+            {{ object.username }}
+        </h1>
+        {% if object.image %}
+            <img id="page_user_profile_picture" src="{{ object.image_url }}=s100-c"/>
+        {% endif %}
+        <p id="page_user_about">
+            {% if object.about %}
+                {{ object.about|urlize|linebreaks }}
+            {% endif %}
+        </p>
+        <a class="btn btn-primary" href="{% url 'projects:list' object.username %}">
+            {% trans "projects" %}
+        </a>
+        <a class="btn btn-primary" href="{% url 'portfolios:list' object.username %}">
+            {% trans "portfolios" %}
+        </a>
+        {% if user.pk == object.pk %}
+            <a class="btn btn-primary" href="{% url 'users:update' object.username %}">
+                {% trans "profile" %}
+            </a>
+        {% else %}
+            <a class="btn btn-primary" href="{% url 'messages_compose_to' object.username %}">
+                <i class="fa fa-envelope"></i>
+            </a>
+        {% endif %}
+    </div>
+    <div class="col-md-2">
+    </div>
+{% endblock content %}

@@ -1,0 +1,52 @@
+img#page_user_profile_picture {
+  border-radius: 50%; }
+
+div#page_user_profile {
+  background-color: white;
+  margin-bottom: 15px;
+  border-radius: 0 !important;
+  border: 1px solid lightgray; }
+  div#page_user_profile img#page_user_profile_picture {
+    border-radius: 50%; }
+  div#page_user_profile h1#page_user_username {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 8px;
+    outline: 0;
+    word-break: break-word; }
+  div#page_user_profile p#page_user_about {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+    outline: 0;
+    word-break: break-word;
+    letter-spacing: -0.02em; }
+  div#page_user_profile div#page_user_dashboard ul {
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    table-layout: auto;
+    list-style: none; }
+    div#page_user_profile div#page_user_dashboard ul li {
+      width: 25%;
+      vertical-align: bottom;
+      display: table-cell;
+      padding: 0; }
+      div#page_user_profile div#page_user_dashboard ul li span.page_user_dashboard_label {
+        color: #8c9ca9;
+        font-size: 10px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        transition: color 0.15s ease-in-out;
+        overflow: hidden; }
+      div#page_user_profile div#page_user_dashboard ul li span.page_user_dashboard_value {
+        display: block;
+        font-size: 18px;
+        padding-top: 3px;
+        font-weight: 500;
+        transition: color 0.15s ease-in-out; }
